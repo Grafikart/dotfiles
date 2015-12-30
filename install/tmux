@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# On commence dans notre dossier perso
+cd ~
+
+# On récupère les dépendances
+sudo apt-get install -y exuberant-ctags cmake libevent-dev libncurses5-dev
+
+# On télécharge la dernière version de tmux
+wget https://github.com/tmux/tmux/releases/download/2.1/tmux-2.1.tar.gz
+tar xvf tmux-2.1.tar.gz
+cd tmux-2.1
+
+# On prépare & install
+./configure && make
+sudo make install
+cd ..
+rm -rf tmux-2.1.tar.gz
+
+# Tmux plugin manager (c-b I pour installer)
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Copie de ma configuration
+wget https://raw.githubusercontent.com/Grafikart/dotfiles/master/.tmux.conf
