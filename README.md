@@ -10,3 +10,10 @@ chmod +x -R install
 ## Trouver les boutons de la souris
 xev | grep button 
 ```
+
+## App utiles
+
+- **easystroke**, permet de mapper les boutons "pouces" de la souris sur des macros
+
+
+

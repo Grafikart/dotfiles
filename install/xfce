@@ -34,3 +34,6 @@ cp $BASEDIR/files/terminalrc $HOME/.config/xfce4/terminal/terminalrc/terminalrc
 # No screen reader
 sudo apt-get remove gnome-orca
 killall orca
+
+# Alt + Click disable (pour la multi selection sur Intellij)
+xfconf-query -c xfwm4 -p /general/easy_click -s none

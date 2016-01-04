@@ -1,0 +1,2 @@
+#!/bin/bash
+xinput set-prop 12 'Device Accel Profile' -1
