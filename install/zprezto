@@ -1,0 +1,8 @@
+#!/bin/sh
+
+BASEDIR=$(dirname $(dirname $0))
+sudo apt-get install zsh
+git clone https://github.com/sindresorhus/pure.git .zfunctions
+mv ".zfunctions/pure.zsh" ".zfunctions/prompt_pure_setup"
+mv ".zfunctions/async.zsh" ".zfunctions/async"
+cp $BASEDIR/.zshrc $HOME/.zshrc

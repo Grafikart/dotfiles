@@ -1,0 +1,12 @@
+#!/bin/sh
+# On passe par RVM (plus simple)
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+\curl -sSL https://get.rvm.io | bash -s stable
+source $HOME/.rvm/scripts/rvm
+
+# On install ruby 2.2
+rvm list known
+rvm install 2.2
+
+# Gem indispensables
+gem install bundler

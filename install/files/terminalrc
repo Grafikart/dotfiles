@@ -1,0 +1,27 @@
+[Configuration]
+ColorCursor=#c5c8c6
+ColorForeground=#c5c8c6
+ColorBackground=#1d1f21
+ColorPalette=#1d1f21;#cc6666;#b5bd68;#f0c674;#81a2be;#b294bb;#8abeb7;#c5c8c6;#969896;#de935f;#282a2e;#373b41;#b4b7b4;#e0e0e0;#a3685a;#ffffff
+FontName=Source Code Pro for Powerline Semi-Bold 10
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=80x24
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=TRUE
+MiscMouseAutohide=FALSE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=TRUE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+MiscScrollAlternateScreen=TRUE
+ColorBold=#586e75
+ColorBoldUseDefault=FALSE
+TabActivityColor=#dc322f
+
