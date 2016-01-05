@@ -1,0 +1,19 @@
+#!/bin/sh
+BASEDIR=$(dirname $0)
+rm -f $HOME/.config/mousespeed
+cp $BASEDIR/mousespeed $HOME/.config/mousespeed
+chmod +x $HOME/.config/mousespeed
+cat > $HOME/.config/autostart/mousespeed.desktop <<- EOM
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0.0
+Type=Application
+Name=Mouse Speed
+Comment=
+Exec=$HOME/.config/mousespeed
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+EOM
+chmod 644 $HOME/.config/autostart/mousespeed.desktop

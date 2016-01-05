@@ -1,5 +1,7 @@
 #!/bin/sh
 
+BASEDIR=$(dirname $(dirname $0))
+
 # Fonts
 sudo apt-get install gnome-font-viewer
 
@@ -37,3 +39,9 @@ killall orca
 
 # Alt + Click disable (pour la multi selection sur Intellij)
 xfconf-query -c xfwm4 -p /general/easy_click -s none
+
+# Compton (parceque le Tearing c'est chiant)
+sudo apt-add-repository ppa:richardgv/compton
+sudo apt-get update
+sudo apt-get install compton
+cp $BASEDIR/.compton.conf $HOME/.compton.conf
