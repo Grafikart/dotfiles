@@ -10,3 +10,6 @@
 *.eot binary
 *.ttf binary
 *.woff binary
+*.jar
+*.tar
+*.bz2

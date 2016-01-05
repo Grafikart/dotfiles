@@ -1,5 +1,8 @@
 #!/bin/sh
 
-# Using Ubuntu
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-sudo apt-get install -y nodejs
+BASEDIR=$(dirname $0)
+. $BASEDIR/inc/functions
+
+explain "Installation de NodeJS 5x"
+  curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+  tell sudo apt-get install -y nodejs

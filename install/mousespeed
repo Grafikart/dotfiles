@@ -1,9 +1,12 @@
 #!/bin/sh
 BASEDIR=$(dirname $0)
-rm -f $HOME/.config/mousespeed
-cp $BASEDIR/mousespeed $HOME/.config/mousespeed
-chmod +x $HOME/.config/mousespeed
-cat > $HOME/.config/autostart/mousespeed.desktop <<- EOM
+. $BASEDIR/inc/functions
+
+echo "SOURIS"
+explain "Suppresion de l'accélération"
+  tell cp -f $BASEDIR/mousespeed $HOME/.config/mousespeed
+  tell chmod +x $HOME/.config/mousespeed
+  cat > $HOME/.config/autostart/mousespeed.desktop <<- EOM
 [Desktop Entry]
 Encoding=UTF-8
 Version=1.0.0
@@ -16,4 +19,6 @@ StartupNotify=false
 Terminal=false
 Hidden=false
 EOM
-chmod 644 $HOME/.config/autostart/mousespeed.desktop
+  tell chmod 644 $HOME/.config/autostart/mousespeed.desktop
+
+success "Souris ralentie avec succès"

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+
+BASEDIR=$(dirname $0)
+. $BASEDIR/inc/functions
+
+explain "Installation de zsh"
+  tell sudo apt-get update
+  tell sudo apt-get install zsh
+  tell chsh -s /bin/zsh
+
+explain "Installation de pure prompt pour zsh"
+  tell sudo apt-get install zsh
+  tell cd ~
+  tell git clone https://github.com/sindresorhus/pure.git .zfunctions
+  tell mv ".zfunctions/pure.zsh" ".zfunctions/prompt_pure_setup"
+  tell mv ".zfunctions/async.zsh" ".zfunctions/async"
+  tell cp $(dirname $BASEDIR)/.zshrc $HOME/.zshrc

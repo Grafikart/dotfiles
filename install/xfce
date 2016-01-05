@@ -1,47 +1,32 @@
 #!/bin/sh
 
-BASEDIR=$(dirname $(dirname $0))
-
-# Fonts
-sudo apt-get install gnome-font-viewer
-
-# Arc-theme
-wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.10/Release.key
-sudo apt-key add - < Release.key
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.10/ /' >> /etc/apt/sources.list.d/arc-theme.list"
-sudo apt-get update
-sudo apt-get install arc-theme
-
-# Flat icons
-sudo add-apt-repository ppa:noobslab/icons
-sudo apt-get update
-sudo apt-get install ultra-flat-icons
-
-# Moka icons
-sudo add-apt-repository ppa:moka/stable
-sudo apt-get update
-sudo apt-get install moka-icon-theme
-
-# Arc-theme
-wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.04/Release.key
-sudo apt-key add - < Release.key
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
-sudo apt-get update
-sudo apt-get install arc-theme
-
-# Terminal 
 BASEDIR=$(dirname $0)
-cp $BASEDIR/files/terminalrc $HOME/.config/xfce4/terminal/terminalrc/terminalrc
+. $BASEDIR/inc/functions
 
-# No screen reader
-sudo apt-get remove gnome-orca
-killall orca
+explain "Installation de gnome-font-viewer"
+  tell sudo apt-get install gnome-font-viewer
 
-# Alt + Click disable (pour la multi selection sur Intellij)
-xfconf-query -c xfwm4 -p /general/easy_click -s none
+explain "Installation d'arc-theme"
+  tell wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.10/Release.key
+  sudo apt-key add - < Release.key
+  sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.10/ /' >> /etc/apt/sources.list.d/arc-theme.list"
+  tell sudo apt-get update
+  tell sudo apt-get install arc-theme
 
-# Compton (parceque le Tearing c'est chiant)
-sudo apt-add-repository ppa:richardgv/compton
-sudo apt-get update
-sudo apt-get install compton
-cp $BASEDIR/.compton.conf $HOME/.compton.conf
+explain "Installation de flat icons"
+  tell sudo add-apt-repository ppa:noobslab/icons
+  tell sudo apt-get update
+  tell sudo apt-get install ultra-flat-icons
+
+explain "Installation du theme pour le terminal"
+  BASEDIR=$(dirname $0)
+  cp $BASEDIR/files/terminalrc $HOME/.config/xfce4/terminal/terminalrc/terminalrc
+
+explain "Désactivation du Alt+Clic"
+  tell xfconf-query -c xfwm4 -p /general/easy_click -s none
+
+explain "Installation de compton pour la compo des fenetre"
+  tell sudo apt-add-repository ppa:richardgv/compton
+  tell sudo apt-get update
+  tell sudo apt-get install compton
+  tell cp $BASEDIR/.compton.conf $HOME/.compton.conf
