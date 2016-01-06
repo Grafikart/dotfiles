@@ -4,8 +4,9 @@ BASEDIR=$(dirname $0)
 
 echo "SOURIS"
 explain "Suppresion de l'accélération"
-  tell cp -f $BASEDIR/mousespeed $HOME/.config/mousespeed
+  tell cp -f $BASEDIR/files/mousespeed $HOME/.config/mousespeed
   tell chmod +x $HOME/.config/mousespeed
+  cat /dev/null > $HOME/.config/autostart/mousespeed.desktop
   cat > $HOME/.config/autostart/mousespeed.desktop <<- EOM
 [Desktop Entry]
 Encoding=UTF-8

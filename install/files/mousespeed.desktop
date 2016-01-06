@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0.0
+Type=Application
+Name=Mouse Speed
+Comment=
+Exec=$HOME/.config/mousespeed
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false

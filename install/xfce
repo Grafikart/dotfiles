@@ -30,3 +30,6 @@ explain "Installation de compton pour la compo des fenetre"
   tell sudo apt-get update
   tell sudo apt-get install compton
   tell cp $BASEDIR/.compton.conf $HOME/.compton.conf
+
+explain "Installation du gestionnaire du moniteur système"
+  tell sudo apt-get install gnome-system-monitor 
