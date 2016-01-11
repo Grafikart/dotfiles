@@ -19,7 +19,6 @@ explain "Installation de flat icons"
   tell sudo apt-get install ultra-flat-icons
 
 explain "Installation du theme pour le terminal"
-  BASEDIR=$(dirname $0)
   cp $BASEDIR/files/terminalrc $HOME/.config/xfce4/terminal/terminalrc/terminalrc
 
 explain "Désactivation du Alt+Clic"
@@ -29,7 +28,11 @@ explain "Installation de compton pour la compo des fenetre"
   tell sudo apt-add-repository ppa:richardgv/compton
   tell sudo apt-get update
   tell sudo apt-get install compton
-  tell cp $BASEDIR/.compton.conf $HOME/.compton.conf
+  tell cp $(dirname $BASEDIR)/.compton.conf $HOME/.compton.conf
 
 explain "Installation du gestionnaire du moniteur système"
-  tell sudo apt-get install gnome-system-monitor 
+  tell sudo apt-get install gnome-system-monitor
+
+explain "Mise en place de la configuration personnalisée"
+  cp $BASEDIR/files/xfce4-keyboard-shortcuts.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+  cp $BASEDIR/files/xfce4-panel.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/

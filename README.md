@@ -7,6 +7,7 @@ git clone git@github.com:Grafikart/dotfiles.git .grafikart
 chmod +x -R install
 
 ./install/....
+```
 
 # Quelques astuces 
 
