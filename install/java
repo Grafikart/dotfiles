@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BASEDIR=$(dirname $0)
+. $BASEDIR/inc/functions
+
+explain "Installation de Java Oracle JDK / JRE"
+  tell sudo add-apt-repository ppa:webupd8team/java
+  tell sudo apt-get update
+  tell sudo apt-get install oracle-java8-installer
