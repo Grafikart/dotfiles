@@ -40,3 +40,9 @@ xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $
 # On modifie le fichier Xmodmap et on teste avec 
 xmodmap ~/.Xmodmap
 ```
+
+## Quand le son se met à foirer
+
+```
+pulseaudio -k && sudo alsa force-reload
+```
