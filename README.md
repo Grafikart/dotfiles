@@ -41,6 +41,12 @@ xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $
 xmodmap ~/.Xmodmap
 ```
 
+## Trouver le process qui utilise un port
+
+```
+sudo netstat -nlp | grep :80
+```
+
 ## Quand le son se met à foirer
 
 ```
