@@ -11,6 +11,10 @@ chmod +x -R install
 
 # Quelques astuces 
 
+## XFCE Terminal sympa
+
+Un thème sympa [SMYCK](https://github.com/monai/xfce4-terminal-colors-smyck) à placer dans `~/.local/share/xfce4/terminal/colorschemes/smyck.theme`
+
 ## App utiles
 
 Une liste d'application à installer avec l'OS
