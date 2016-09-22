@@ -11,6 +11,12 @@ chmod +x -R install
 
 # Quelques astuces 
 
+## Themes
+
+- [Arc Theme](https://github.com/horst3180/arc-theme)
+- [Arc Theme Flatabulous](https://github.com/andreisergiu98/arc-flatabulous-theme)
+- [Vertex](https://github.com/horst3180/vertex-theme) + [Icons](https://github.com/horst3180/vertex-icons)
+
 ## XFCE Terminal sympa
 
 Un thème sympa [SMYCK](https://github.com/monai/xfce4-terminal-colors-smyck) à placer dans `~/.local/share/xfce4/terminal/colorschemes/smyck.theme`
