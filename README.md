@@ -1,5 +1,7 @@
 # Install
 
+[![Aperçu](screenshot.png)](https://raw.githubusercontent.com/Grafikart/dotfiles/master/screenshot.png)
+
 Les trucs chiant à installer sont dans le dossier install
 
 ```
