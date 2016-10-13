@@ -18,6 +18,7 @@ chmod +x -R install
 - [Arc Theme](https://github.com/horst3180/arc-theme)
 - [Arc Theme Flatabulous](https://github.com/andreisergiu98/arc-flatabulous-theme)
 - [Vertex](https://github.com/horst3180/vertex-theme) + [Icons](https://github.com/horst3180/vertex-icons)
+- Police Roboto (10)
 
 ## XFCE Terminal sympa
 
