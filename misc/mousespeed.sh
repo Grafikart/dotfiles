@@ -1,7 +1,5 @@
 #!/bin/bash
-
-sleep 5
-
+# Permet de retirer l'accélération matériel pour ma souris
 SEARCH="Razer Razer Taipan"
 
 if [ "$SEARCH" = "" ]; then
@@ -19,5 +17,5 @@ for i in $ids
 do
     xinput set-prop $i 'Device Accel Profile' -1
     xinput set-prop $i 'Device Accel Constant Deceleration' 1
-    xinput set-prop $i 'Device Accel Velocity Scaling' 10
+    xinput set-prop $i 'Device Accel Velocity Scaling' 15
 done

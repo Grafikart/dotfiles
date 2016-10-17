@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <value type="int" value="2"/>
+    <value type="int" value="3"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=2880;y=15"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="30"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="16"/>
+        <value type="int" value="3"/>
+        <value type="int" value="15"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="2"/>
+      </property>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=6;x=960;y=15"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="size" type="uint" value="30"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="4"/>
+      </property>
+      <property name="position-locked" type="bool" value="true"/>
+    </property>
+    <property name="panel-3" type="empty">
+      <property name="position" type="string" value="p=6;x=4800;y=16"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="size" type="uint" value="30"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+      </property>
+      <property name="position-locked" type="bool" value="true"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-2" type="string" value="actions"/>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="show-labels" type="bool" value="true"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+    </property>
+    <property name="plugin-15" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-5" type="string" value="clock"/>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="names-visible" type="array">
+        <value type="string" value="obs"/>
+        <value type="string" value="ckb"/>
+        <value type="string" value="franz"/>
+        <value type="string" value="discordcanary"/>
+        <value type="string" value="pamac-tray"/>
+        <value type="string" value="thunar"/>
+        <value type="string" value="applet networkmanager"/>
+      </property>
+    </property>
+    <property name="plugin-16" type="string" value="whiskermenu"/>
+    <property name="plugin-1" type="string" value="tasklist">
+      <property name="include-all-monitors" type="bool" value="false"/>
+    </property>
+    <property name="plugin-4" type="string" value="tasklist">
+      <property name="include-all-workspaces" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+    </property>
+  </property>
+</channel>

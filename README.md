@@ -1,56 +1,38 @@
-# Install
+# A propos
+
+Ce dépôt est une bouée de sauvetage en cas de formatage et me permet de noter les choses à savoir concernant mon installation de Linux.
 
 [![Aperçu](screenshot.png)](https://raw.githubusercontent.com/Grafikart/dotfiles/master/screenshot.png)
 
-Les trucs chiant à installer sont dans le dossier install
+La liste des paquets installés sur ma machine sont disponibles dans le fichier package.list. Les paquets AUR sont en fin de liste
 
 ```
-git clone git@github.com:Grafikart/dotfiles.git .grafikart
-chmod +x -R install
-
-./install/....
+cat package.list | xargs yaourt -S --needed --noconfirm
 ```
 
-# Quelques astuces 
+# Trucs & Astuces
 
-## Themes
+## Tearing Nvidia
 
-- [Arc Theme](https://github.com/horst3180/arc-theme)
-- [Arc Theme Flatabulous](https://github.com/andreisergiu98/arc-flatabulous-theme)
-- [Vertex](https://github.com/horst3180/vertex-theme) + [Icons](https://github.com/horst3180/vertex-icons)
-- Police Roboto (10)
+Le pilote propriétaire nvidia rajoute un tearing atroce :
 
-## XFCE Terminal sympa
+- Utiliser nvidia settings pour gérer les settings
+- Exporter la configuration et ajouter  `{ ForceCompositionPipeline = On }` dans la partie metamodes de "Screen"
 
-Un thème sympa [SMYCK](https://github.com/monai/xfce4-terminal-colors-smyck) à placer dans `~/.local/share/xfce4/terminal/colorschemes/smyck.theme`
+## Remapper les boutons de la souris
 
-## App utiles
-
-Une liste d'application à installer avec l'OS
-
-- **easystroke**, permet de mapper les boutons "pouces" de la souris sur des macros (on trouve le bouton avec `xev | grep button`
-
-## Contrôler spotify au clavier 
-
-Pour controler Spotify au clavier rajouter des racourcis vers ces commandes
-
-```
-dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
-dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-```
+[![EasyStroke permet  de remapper les boutons de la souris](screenshots/easystroke.png)](https://raw.githubusercontent.com/Grafikart/dotfiles/master/screenshots/easystroke.png)
 
 ## Remapper touches du clavier
 
-Pour remplacer une touche par une autre
+Pour remplacer une touche par une autre. Je l'utilise pour remplacer la touche puissance 2 par un back-tick.
 
 ```
-# On génère le fichier de map 
+# On génère le fichier de map
 xmodmap -pke > ~/.Xmodmap
-# On trouve la clef a remap 
+# On trouve la clef a remap
 xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-# On modifie le fichier Xmodmap et on teste avec 
+# On modifie le fichier Xmodmap et on teste avec
 xmodmap ~/.Xmodmap
 ```
 
