@@ -1,0 +1,184 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+background = #212121
+background-alt = #1D1F21
+foreground = #CCC
+foreground-alt = #548587
+fg-1 = #ffaf5f
+fg-2 = #ffd494
+primary = #ffb52a
+secondary = #e60053
+; underline = #b04f41
+underline = #FFD460
+alert = #bd2c40
+
+[bar/default]
+monitor = DVI-I-1
+height = 32
+offset-y = 0
+top = true
+fixed-center = true 
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 0
+padding-right = 3
+module-margin = 2
+
+font-0 = SFNS Display:size=10;2
+font-1 = FontAwesome:size=10;2
+font-2 = xos4terminus:size=18:weight=bold;2
+font-3 = "Material Design Icons:size=13;2"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = keyboard powermenu
+
+[bar/center]
+inherit = bar/default
+monitor = DVI-I-1
+tray-position = right
+tray-detached = false 
+tray-padding = 0
+
+[bar/left]
+inherit = bar/default
+monitor = HDMI-0
+
+[bar/right]
+inherit = bar/default
+monitor = DVI-D-0
+modules-left = i3 volume date
+padding-left = 3
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+format = <label-mode><label-state>
+label-mode-padding = 2
+label-mode-underline = ${colors.underline}
+label-focused = %index%  %icon%
+label-focused-foreground = #ffffff
+label-focused-underline = ${colors.underline}
+label-focused-padding = 2
+label-unfocused = %index%  %icon%
+label-unfocused-padding = 2
+label-visible = %index%  %icon%
+label-visible-underline = #555555
+label-visible-padding = 2
+label-urgent = %index%  %icon%
+label-urgent-foreground = #000000
+label-urgent-background = ${colors.underline} 
+label-urgent-padding = 2
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = %B %d,
+time = %H:%M
+
+label = %date% %time%
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted = <label-muted>
+
+label-volume = %percentage%%
+label-muted = %percentage%%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+
+[module/wired]
+type = internal/network
+interface = eth0
+format-connected = <label-connected>
+format-connected-underline = ${colors.underline}
+format-disconnected = <label-disconnected>
+label-connected =  %local_ip%
+label-disconnected = 
+
+[module/powermenu]
+type = custom/menu
+
+label-active-font = 1
+
+format-spacing = 1
+
+label-open = 
+label-close = 
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = reboot
+menu-0-1 = power off
+menu-0-1-exec = poweroff
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
