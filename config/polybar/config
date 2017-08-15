@@ -8,20 +8,13 @@
 ;=====================================================
 
 [colors]
-background = #212121
-background-alt = #1D1F21
-foreground = #CCC
-foreground-alt = #548587
-fg-1 = #ffaf5f
-fg-2 = #ffd494
-primary = #ffb52a
-secondary = #e60053
-; underline = #b04f41
-underline = #FFD460
-alert = #bd2c40
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+foregroundalt = ${xrdb:color8}
+active = ${xrdb:active}
+underline = ${colors.active}
 
 [bar/default]
-monitor = DVI-I-1
 height = 32
 offset-y = 0
 top = true
@@ -47,7 +40,7 @@ modules-right = keyboard powermenu
 
 [bar/center]
 inherit = bar/default
-monitor = DVI-I-1
+;monitor = DVI-I-1
 tray-position = right
 tray-detached = false 
 tray-padding = 0
@@ -75,11 +68,12 @@ format = <label-mode><label-state>
 label-mode-padding = 2
 label-mode-underline = ${colors.underline}
 label-focused = %index%  %icon%
-label-focused-foreground = #ffffff
+label-focused-foreground = ${colors.active}
 label-focused-underline = ${colors.underline}
 label-focused-padding = 2
 label-unfocused = %index%  %icon%
 label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.foregroundalt}
 label-visible = %index%  %icon%
 label-visible-underline = #555555
 label-visible-padding = 2
@@ -99,6 +93,7 @@ ws-icon-6 = 7;
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+format-foreground = ${colors.foreground}
 
 [module/filesystem]
 type = internal/fs
@@ -165,11 +160,12 @@ type = custom/menu
 label-active-font = 1
 
 format-spacing = 1
+format-foreground = ${colors.foregroundalt}
 
 label-open = 
 label-close = 
 label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
+label-separator-foreground = ${colors.foregroundalt}
 
 menu-0-0 = reboot
 menu-0-0-exec = reboot

@@ -4,6 +4,7 @@
 # Doc : http://i3wm.org/docs/userguide.html
 
 set $mod Mod4
+set $alt Mod1
 
 ###############################
 #          APPARENCE          #
@@ -12,8 +13,8 @@ set $mod Mod4
 font pango: SFNS Display 10
 
 # Couleurs
-set $active  			#FFD460
-set $inactive 			#212121
+set_from_resource       $active       active
+set_from_resource       $inactive     background
 
 # class			border	  backgr.   	text	indicat child_border
 client.focused          $inactive $inactive   	#FFFFFF #2e9ef4 $active
