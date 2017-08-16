@@ -14,18 +14,20 @@ font pango: SFNS Display 10
 
 # Couleurs
 set_from_resource       $active       active
-set_from_resource       $inactive     background
+set_from_resource       $inactive     secondary
+set_from_resource       $background   background
+set_from_resource       $foreground   foreground
 
-# class			border	  backgr.   	text	indicat child_border
-client.focused          $inactive $inactive   	#FFFFFF #2e9ef4 $active
-client.focused_inactive $inactive $inactive 	#ffffff #484e50 $inactive
-client.unfocused        $inactive $inactive   	#888888 #292d2e $inactive
-client.urgent           $active   $active    	#ffffff #900000 $active
-client.placeholder      $inactive $placeholder  #ffffff #000000 $inactive
-client.background       $inactive
+# class			border	    backgr.   	text	       indicat   child_border
+client.focused          $background $background $foreground    #2e9ef4   $active
+client.focused_inactive $background #212121 	$foreground    #484e50   $inactive
+client.unfocused        $background #212121   	$inactive      #292d2e   $inactive
+client.urgent           $background $active    	$foreground    #900000   $active
+client.placeholder      $background $background $foreground    #000000   $inactive
+client.background       $background
 
 # Fond d'écran
-exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
 
 ###############################
 #         KEYBINDING          #
@@ -34,7 +36,7 @@ exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.png
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -115,7 +117,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Control de l'audio
+# Audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
@@ -124,6 +126,8 @@ bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2
 bindsym XF86AudioPause exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+# Capture d'écran
+bindsym Print exec xfce4-screenshooter
 
 ###############################
 #          SOURIS             #
@@ -177,11 +181,12 @@ bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Force certaines apps à des wokspaces dédiés
-assign [class="Code"]  $ws1
+assign [class="Code"]            $ws1
 assign [class="jetbrains-idea"]  $ws1
-assign [class="Google-chrome"]  $ws5
-assign [class="spotify"]  $ws3
-assign [class="discord"]  $ws4
+assign [class="Google-chrome"]   $ws5
+assign [class="spotify"]         $ws3
+assign [class="discord"]         $ws4
+assign [class="skypeforlinux"]   $ws4
 
 ###############################
 #            MISC             #
@@ -195,6 +200,7 @@ exec --no-startup-id easystroke
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 1
+for_window [class=".*"] title_format "  %title"
 gaps inner 5
 smart_borders on
 smart_gaps on

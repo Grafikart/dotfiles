@@ -4,13 +4,12 @@
 
 URxvt*scrollBar:	false
 URxvt*letterSpace: 	-1
-URxvt*font: 		xft:Menlo for Powerline:regular:size=12
-URxvt*boldFont:		xft:Menlo for Powerline:bold:ize=12
+URxvt*font: 		xft:Menlo for Powerline:regular:size=14
+URxvt*boldFont:		xft:Menlo for Powerline:bold:ize=14
 URxvt*cursorBlink:  true
 URxvt.iso14755:		false
 URxvt*utf8:			true
 ! Pour obtenir la touché pressée
-! xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }
 URxvt.keysym.C-equal:         resize-font:bigger
 URxvt.keysym.C-parenright:    resize-font:smaller
 
@@ -30,23 +29,24 @@ Xft.hintstyle:		hintslight
 ! ============
 *background: #282828
 *foreground: #CCCCCC
-*active:  #fabd2f
-*color0:  #282828
-*color8:  #928374
-*color1:  #cc241d
-*color9:  #fb4934
-*color2:  #fabd2f
-*color10: #4D6E4E
-*color3:  #d79921
-*color11: #fabd2f
-*color4:  #458588
-*color12: #83a598
-*color5:  #b16286
-*color13: #d3869b
-*color6:  #689d6a
-*color14: #8ec07c
-*color7:  #a89984
-*color15: #ebdbb2
+*secondary:  #928374
+*active:     #fabd2f
+*color0:     #282828
+*color8:     #928374
+*color1:     #E84F4F
+*color9:     #D23D3D
+*color2:     #B8D68C
+*color10:    #A0CF5D
+*color3:     #d79921
+*color11:    #fabd2f
+*color4:     #458588
+*color12:    #83a598
+*color5:     #b16286
+*color13:    #d3869b
+*color6:     #689d6a
+*color14:    #8ec07c
+*color7:     #a89984
+*color15:    #ebdbb2
 
 
 ! =================
@@ -62,7 +62,7 @@ rofi.color-normal:		argb:00000000, #a89984, argb:00000000,  m_color,  hl_text
 rofi.color-urgent:		argb:00000000, #F99157, argb:00000000,  #F99157,  hl_text
 rofi.color-active:		argb:00000000, #6699CC, argb:00000000,  #6699CC,  hl_text
 rofi.color-window:		argb:ee222222, m_color, m_color
-rofi.font:				xos4terminus medium 12
+rofi.font:				    "SFNS Display" medium 16
 rofi.bw:                0
 rofi.padding:           10
 rofi.hide-scrollbar:    true

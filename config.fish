@@ -5,7 +5,7 @@ alias remove "pacaur -Rns"
 
 # Android
 set -x EDITOR /usr/bin/vim
-set -x ANDROID_HOME /home/jonathan/.android/sdk/
+set -x ANDROID_HOME $HOME/.android/sdk/
 set -x JAVA_HOME /usr/lib/jvm/java-8-jdk
 
 # ruby (rvm)
