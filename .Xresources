@@ -1,69 +1,76 @@
 ! ===================
-! urxvt configuration
+!       urxvt
 ! ===================
 
-URxvt*scrollBar:	false
-URxvt*letterSpace: 	-1
-URxvt*font: 		xft:Menlo for Powerline:regular:size=14
-URxvt*boldFont:		xft:Menlo for Powerline:bold:ize=14
-URxvt*cursorBlink:  true
-URxvt.iso14755:		false
-URxvt*utf8:			true
-! Pour obtenir la touché pressée
-URxvt.keysym.C-equal:         resize-font:bigger
-URxvt.keysym.C-parenright:    resize-font:smaller
+URxvt*scrollBar:	    false
+URxvt*letterSpace:  	-1
+URxvt.internalBorder: 10
+URxvt*font: 		      xft:Menlo for Powerline:regular:size=14
+URxvt*boldFont:		    xft:Menlo for Powerline:bold:ize=14
+URxvt*cursorBlink:    true
+URxvt.iso14755:		    false
+URxvt*utf8:			      true
+URxvt.keysym.C-equal:      resize-font:bigger
+URxvt.keysym.C-parenright: resize-font:smaller
 
 ! =================
-! Xft configuration
+!       Xft
 ! =================
-
 Xft.dpi:          	96
 Xft.antialias:     	true
-Xft.rgba:			subpixel
+Xft.rgba:			      subpixel
 Xft.hinting:       	true
-Xft.hintstyle:		hintslight
-! Xft.lcdfilter:	lcddefault
+Xft.hintstyle:		  hintslight
+! Xft.lcdfilter:	  lcddefault
 
 ! ============
-! color scheme
+!   Couleurs
 ! ============
-*background: #282828
-*foreground: #CCCCCC
-*secondary:  #928374
-*active:     #fabd2f
-*color0:     #282828
+*background: #1D1D26
+*foreground: #B3B3D4
+*secondary:  #535172
+*active:     #FFCC66
+!black
+*color0:     #1D1D26
 *color8:     #928374
-*color1:     #E84F4F
-*color9:     #D23D3D
-*color2:     #B8D68C
-*color10:    #A0CF5D
-*color3:     #d79921
-*color11:    #fabd2f
-*color4:     #458588
-*color12:    #83a598
-*color5:     #b16286
-*color13:    #d3869b
-*color6:     #689d6a
-*color14:    #8ec07c
-*color7:     #a89984
-*color15:    #ebdbb2
-
+!red
+*color1:     #E20049
+*color9:     #E20049
+!green
+*color2:     #00F572
+*color10:    #00D965
+!yellow
+*color3:     #FFCC66
+*color11:    #D9AD57
+!blue
+*color4:     #00BFFF
+*color12:    #00A3D9
+!magenta
+*color5:     #FF3399
+*color13:    #BD2671
+!cyan
+*color6:     #7874A6
+*color14:    #535172
+!white
+*color7:     #F8F8F0
+*color15:    #B3B3AD
 
 ! =================
-! rofi color scheme
+! rofi
 ! =================
-#define color_scheme_green
-#define hl_text #282828
-#define m_color #fabd2f
+#define background #1D1D26
+#define text       #B3B3D4
+#define active     #FFCC66
 
-rofi.color-enabled:		true
+rofi.fullscreen:        true
+rofi.color-enabled:		  true
 rofi.separator-style: 	solid
-rofi.color-normal:		argb:00000000, #a89984, argb:00000000,  m_color,  hl_text
-rofi.color-urgent:		argb:00000000, #F99157, argb:00000000,  #F99157,  hl_text
-rofi.color-active:		argb:00000000, #6699CC, argb:00000000,  #6699CC,  hl_text
-rofi.color-window:		argb:ee222222, m_color, m_color
-rofi.font:				    "SFNS Display" medium 16
+rofi.color-window:      argb:e81d1d26, active, active
+rofi.color-normal:      argb:0baa263, #535172, argb:01d1d26, argb:01d1d26, text
+rofi.color-active:      active, background, active, active, background
+rofi.color-urgent:      #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
+rofi.font:				      "SFNS Display" medium 16
 rofi.bw:                0
-rofi.padding:           10
+rofi.padding:           200
 rofi.hide-scrollbar:    true
-rofi.lines:             5
+rofi.lines:             15

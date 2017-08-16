@@ -8,3 +8,6 @@ ln -s $(readlink -f config/polybar) ~/.config/polybar
 
 rm -f ~/.Xresources
 ln -s $(readlink -f .Xresources) ~/.Xresources
+
+rm -f ~/.config/compton.conf
+ln -s $(readlink -f config/compton.conf) ~/.config/compton.conf
