@@ -22,7 +22,7 @@ set_from_resource       $foreground   foreground
 client.focused          $background #303040     $foreground    #2e9ef4   $active
 client.focused_inactive $background #303040 	$foreground    #484e50   $inactive
 client.unfocused        $background $background $inactive      #292d2e   $inactive
-client.urgent           $background $active    	$foreground    #900000   $active
+client.urgent           $active     $active    	$background    #900000   $active
 client.placeholder      $background $background $foreground    #000000   $inactive
 client.background       $background
 
@@ -36,12 +36,12 @@ exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt -cd "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+A kill
 bindsym $alt+F4 kill
-bindsym $mod+q kill
+bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
 bindsym $mod+d exec rofi -show run
@@ -81,7 +81,7 @@ bindsym $mod+Shift+f floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-# bindsym $mod+q focus parent
+bindsym $mod+q focus parent
 
 # focus the child container
 # bindsym $mod+d focus child
@@ -100,16 +100,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym m resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym m resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"

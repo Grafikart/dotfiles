@@ -4,13 +4,14 @@ install:
 	sudo yay -S - < package.list
 
 i3:
-	cd config && stow -t ~ urxvt
+	cd config && stow -v -t ~ urxvt
 	xrdb ~/.Xresources
-	cd config && stow -t ~ fish
-	cd config && stow -t ~ i3
-	cd config && stow -t ~ polybar
-	cd config && stow -t ~ compton
-	cd config && stow -t ~ easystroke
+	cd config && stow -v -t ~ fish
+	cd config && stow -v -t ~ i3
+	cd config && stow -v -t ~ polybar
+	cd config && stow -v -t ~ compton
+	cd config && stow -v -t ~ keyboard
+	cd config && stow -v -t ~ easystroke
 
 xfce:
-	cd config && stow -t ~ xfce4
+	cd config && stow -v -t ~ xfce4
