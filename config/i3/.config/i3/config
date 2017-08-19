@@ -19,9 +19,9 @@ set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
 # class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background $background $foreground    #2e9ef4   $active
-client.focused_inactive $background #1D1D27 	$foreground    #484e50   $inactive
-client.unfocused        $background #1D1D27   	$inactive      #292d2e   $inactive
+client.focused          $background #303040     $foreground    #2e9ef4   $active
+client.focused_inactive $background #303040 	$foreground    #484e50   $inactive
+client.unfocused        $background $background $inactive      #292d2e   $inactive
 client.urgent           $background $active    	$foreground    #900000   $active
 client.placeholder      $background $background $foreground    #000000   $inactive
 client.background       $background

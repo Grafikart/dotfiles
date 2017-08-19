@@ -77,8 +77,7 @@ label-visible = %index%  %icon%
 label-visible-underline = ${colors.secondary}
 label-visible-padding = 2
 label-urgent = %index%  %icon%
-label-urgent-foreground = #000000
-label-urgent-background = ${colors.secondary} 
+label-urgent-foreground = ${colors.underline} 
 label-urgent-padding = 2
 
 ws-icon-0 = 1;
