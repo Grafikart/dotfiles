@@ -185,7 +185,7 @@ bindsym $mod+Shift+agrave move container to workspace $ws10
 assign [class="Code"]            $ws1
 assign [class="jetbrains-idea"]  $ws1
 assign [class="Google-chrome"]   $ws5
-assign [class="spotify"]         $ws3
+assign [class="Spotify"]         $ws3
 assign [class="discord"]         $ws4
 assign [class="skypeforlinux"]   $ws4
 
@@ -195,8 +195,12 @@ assign [class="skypeforlinux"]   $ws4
 # Applications au démarrage
 exec --no-startup-id discord
 exec --no-startup-id google-chrome-stable
+exec --no-startup-id spotify
 exec --no-startup-id easystroke
+exec --no-startup-id redshift -l 43.610769:3.876716
 exec --no-startup-id compton -f
+# Pamac Manager a besoin de ça pour gérer l'authentification
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 1

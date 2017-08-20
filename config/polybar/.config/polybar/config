@@ -1,11 +1,5 @@
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
+; Doc: https://github.com/jaagr/polybar
+; Wiki: https://github.com/jaagr/polybar/wiki
 
 [colors]
 background = ${xrdb:background}
@@ -35,11 +29,12 @@ font-3 = "Material Design Icons:size=13;2"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = keyboard powermenu
+modules-right = cpu memory spotify volume date powermenu
 
 [bar/center]
 inherit = bar/default
 monitor = DVI-I-1
+modules-right = spotify volume powermenu
 tray-position = right
 tray-detached = false 
 tray-padding = 0
@@ -47,11 +42,14 @@ tray-padding = 0
 [bar/left]
 inherit = bar/default
 monitor = HDMI-0
+modules-left = 
+modules-right = cpu memory i3
 
 [bar/right]
 inherit = bar/default
 monitor = DVI-D-0
-modules-left = i3 volume date
+modules-left =  date i3
+modules-right = 
 padding-left = 3
 
 [module/i3]
@@ -67,14 +65,15 @@ format = <label-mode><label-state>
 label-mode-padding = 2
 label-mode-underline = ${colors.underline}
 label-focused = %index%  %icon%
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.underline}
 label-focused-underline = ${colors.underline}
 label-focused-padding = 2
 label-unfocused = %index%  %icon%
 label-unfocused-padding = 2
 label-unfocused-foreground = ${colors.secondary}
+label-unfocused-underline = ${colors.secondary}
 label-visible = %index%  %icon%
-label-visible-underline = ${colors.secondary}
+label-visible-underline = ${colors.foreground}
 label-visible-padding = 2
 label-urgent = %index%  %icon%
 label-urgent-foreground = ${colors.underline} 
@@ -95,48 +94,48 @@ label = %title:0:30:...%
 [module/filesystem]
 type = internal/fs
 interval = 25
-
 mount-0 = /
-
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.secondary}
 
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format = <label>
+format-prefix = "  "
+format-underline = #FF3399
+label-underline = #FF3399
+format-foreground = #FF3399
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-prefix = " "
+format-underline = #00BFFF
+format-foreground = #00BFFF
+label-underline = #00BFFF
 label = %percentage_used%%
 
 [module/date]
 type = internal/date
 interval = 5
-
 date = %B %d,
 time = %H:%M
-
-label = %date% %time%
+label =   %date% %time%
+format-underline = ${colors.secondary}
 
 [module/volume]
 type = internal/volume
-
-format-volume = <ramp-volume> <label-volume>
-
-format-muted = <label-muted>
-
+format-volume = <ramp-volume>  <label-volume>
+format-muted =  
 label-volume = %percentage%%
+label-volume-underline = ${colors.secondary}
+format-volume-underline = ${colors.secondary}
+label-muted-underline = ${colors.secondary}
+format-muted-underline = ${colors.secondary}
 label-muted = %percentage%%
-
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -153,21 +152,32 @@ label-disconnected = 
 
 [module/powermenu]
 type = custom/menu
-
 label-active-font = 1
-
 format-spacing = 1
-format-foreground = ${colors.foreground}
-
 label-open = 
+label-open-underline = ${colors.secondary}
 label-close = 
+label-close-foreground = #E20049
 label-separator = |
 label-separator-foreground = ${colors.secondary}
 
 menu-0-0 = reboot
+menu-0-0-foreground = #FFCC66
 menu-0-0-exec = reboot
 menu-0-1 = power off
+menu-0-1-foreground = #FFCC66
 menu-0-1-exec = poweroff
+
+[module/spotify]
+type = custom/script
+exec-if = ~/.config/polybar/spotify.sh --isPlaying
+exec = ~/.config/polybar/spotify.sh --title
+click-left = i3-msg workspace 3
+interval = 5
+format=   <label> 
+format-foreground=#00D965
+format-underline = #00D965
+label = %output%
 
 [settings]
 screenchange-reload = true

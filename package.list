@@ -31,7 +31,7 @@ ntfs-3g
 nvidia
 nvidia-settings
 obs-studio
-openssh
+pavucontrol
 pcmanfm
 php
 php-apcu
@@ -39,7 +39,6 @@ php-gd
 php-intl
 php-mcrypt
 php-sqlite
-pkg-config
 polybar-git
 pulseaudio-alsa
 redis
