@@ -1,7 +1,13 @@
-.PHONY: i3 install xfce
+.PHONY: i3 xfce install installdev installi3
 
 install:
-	xargs -d '\n' -a package.list yay --noconfirm -S
+	xargs -d '\n' -a packages/package.list yay --noconfirm -S
+
+installi3: install
+	xargs -d '\n' -a packages/i3.list yay --noconfirm -S
+
+installdev: install
+	xargs -d '\n' -a packages/dev.list yay --noconfirm -S
 
 i3:
 	cd config && stow -v -t ~ urxvt
