@@ -1,7 +1,7 @@
 .PHONY: i3 install xfce
 
 install:
-	sudo yay -S - < package.list
+	xargs -d '\n' -a package.list yay --noconfirm -S
 
 i3:
 	cd config && stow -v -t ~ urxvt
