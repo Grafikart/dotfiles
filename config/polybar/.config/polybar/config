@@ -34,7 +34,7 @@ modules-right = cpu memory spotify volume date powermenu
 [bar/center]
 inherit = bar/default
 monitor = DVI-I-1
-modules-right = spotify powermenu
+modules-right = powermenu
 tray-position = right
 tray-detached = false 
 tray-padding = 0
@@ -76,7 +76,9 @@ label-visible = %index%  %icon%
 label-visible-underline = ${colors.foreground}
 label-visible-padding = 2
 label-urgent = %index%  %icon%
-label-urgent-foreground = ${colors.underline} 
+label-urgent-foreground = ${colors.background} 
+label-urgent-background = ${colors.underline} 
+label-urgent-underline = ${colors.underline} 
 label-urgent-padding = 2
 
 ws-icon-0 = 1;

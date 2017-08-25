@@ -175,6 +175,10 @@ bindsym $mod+ccedilla workspace $ws9
 bindsym $mod+agrave workspace $ws10
 bindsym $mod+Tab workspace next
 bindsym $mode+Shift+Tab workspace prev
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+j workspace next
+bindsym $mod+Ctrl+m workspace prev
 
 # Déplacement vers un Workspace
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -197,7 +201,7 @@ assign [class="discord|skypeforlinux"]                          $ws5
 assign [class="GitKraken"]                                      $ws6
 for_window [class="GitKraken"] focus
 # Workspace 7 (Ecran droite, Navigateur)
-assign [class="Google-chrome|Vivaldi-stable|Opera|Firefox"]     $ws7
+# assign [class="Google-chrome|Vivaldi-stable|Opera|Firefox"]     $ws7
 # Workspace 8 (Ecran droite, Music)
 assign [class="Spotify"]                                        $ws8
 for_window [class="Spotify"]                  move to workspace $ws8
