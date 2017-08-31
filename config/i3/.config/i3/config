@@ -210,11 +210,11 @@ for_window [class="Spotify"]                  move to workspace $ws8
 #            MISC             #
 ###############################
 # Applications au démarrage
+exec --no-startup-id compton
 exec --no-startup-id discord
 exec --no-startup-id spotify
 exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
-exec --no-startup-id compton -f
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
