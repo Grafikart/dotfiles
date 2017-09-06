@@ -196,7 +196,7 @@ bindsym $mod+Shift+agrave move container to workspace $ws10; workspace $ws10
 # Workspace 1 (Code)
 assign [class="jetbrains-idea|Code"]                            $ws1
 # Workspace 5 (Ecran gauche, Tchat)
-assign [class="discord|skypeforlinux"]                          $ws5
+assign [class="discord|skypeforlinux|Skype Preview"]                          $ws5
 # Workspace 6 (Ecran gauche, Versioning)
 assign [class="GitKraken"]                                      $ws6
 for_window [class="GitKraken"] focus
