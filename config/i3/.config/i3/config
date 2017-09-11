@@ -210,7 +210,7 @@ for_window [class="Spotify"]                  move to workspace $ws8
 #            MISC             #
 ###############################
 # Splits "inteligent"
-exec --no-startup-id ~/.config/i3/alternating_layouts.py
+# exec --no-startup-id ~/.config/i3/alternating_layouts.py
 # Applications au démarrage
 exec --no-startup-id compton
 exec --no-startup-id discord
