@@ -1,0 +1,16 @@
+rofi.fullscreen: true
+rofi.color-enabled: true
+rofi.color-window: argb:ee292f37, argb:0292f37, #259E83
+rofi.color-normal: argb:2000000, #B3B3AD, argb:2000000, argb:2000000, #259E83
+rofi.color-active: argb:2000000, #B3B3AD, argb:2000000, argb:2000000, #B3B3AD
+rofi.color-urgent: argb:2000000, #B3B3AD, argb:2000000, argb:2000000, #B3B3AD
+
+rofi.font: System San Francisco Display 14
+rofi.eh: 1
+rofi.line-margin: 20
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 3
+rofi.width: 100
+rofi.padding: 200
+rofi.bw: 0

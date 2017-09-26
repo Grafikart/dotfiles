@@ -21,6 +21,7 @@ i3:
 	$(stow) compton
 	$(stow) keyboard
 	$(stow) easystroke
+	$(stow) rofi
 
 xfce:
 	$(stow) xfce4

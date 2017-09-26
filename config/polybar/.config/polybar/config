@@ -2,8 +2,10 @@
 ; Wiki: https://github.com/jaagr/polybar/wiki
 
 [colors]
+active = ${xrdb:active}
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
+urgent = ${xrdb:color1}
 secondary = ${xrdb:secondary}
 underline = ${xrdb:active}
 
@@ -22,10 +24,9 @@ padding-left = 0
 padding-right = 3
 module-margin = 2
 
-font-0 = SFNS Display:size=10;2
-font-1 = FontAwesome:size=10;2
-font-2 = xos4terminus:size=18:weight=bold;2
-font-3 = "Material Design Icons:size=13;2"
+font-0 = System San Francisco Display:size=10;2
+font-1 = FontAwesome:size=11;3
+font-2 = MaterialIcons:size=11;4
 
 modules-left = i3
 modules-center = xwindow
@@ -63,23 +64,18 @@ reverse-scroll = false
 fuzzy-match = true
 format = <label-mode><label-state>
 label-mode-padding = 2
-label-mode-underline = ${colors.underline}
 label-focused = %index%  %icon%
-label-focused-foreground = ${colors.underline}
-label-focused-underline = ${colors.underline}
 label-focused-padding = 2
 label-unfocused = %index%  %icon%
 label-unfocused-padding = 2
-label-unfocused-foreground = ${colors.foreground}
-label-unfocused-underline = ${colors.secondary}
 label-visible = %index%  %icon%
-label-visible-underline = ${colors.foreground}
 label-visible-padding = 2
 label-urgent = %index%  %icon%
-label-urgent-foreground = ${colors.background} 
-label-urgent-background = ${colors.underline} 
-label-urgent-underline = ${colors.underline} 
 label-urgent-padding = 2
+label-focused-foreground = ${colors.active}
+label-visible-foreground = ${colors.active}
+label-unfocused-foreground = ${colors.secondary}
+label-urgent-foreground = ${colors.urgent} 
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -108,38 +104,39 @@ type = internal/cpu
 interval = 2
 format = <label>
 format-prefix = "  "
-format-underline = ${colors.secondary}
 label = %percentage%%
+format-foreground = ${colors.active}
+label-foreground = ${colors.foreground}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-underline = ${colors.secondary}
 label = %percentage_used%%
+format-foreground = ${colors.active}
+label-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
-interval = 5
-date = %B %d,
-time = %H:%M
-label =   %date% %time%
-format-underline = ${colors.secondary}
+date = %{F#259E83}   %{F#535172}%B %d,  %{F#B3B3D4}%H:%M
 
 [module/volume]
 type = internal/volume
-format-volume = <ramp-volume>  <label-volume>
+format-volume = <ramp-volume> <bar-volume>
 format-muted =  
-label-volume = %percentage%%
-label-volume-underline = ${colors.secondary}
-format-volume-underline = ${colors.secondary}
-label-muted-underline = ${colors.secondary}
-format-muted-underline = ${colors.secondary}
-label-muted = %percentage%%
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
+ramp-volume-foreground = ${colors.active}
+bar-volume-width = 6
+bar-volume-indicator =
+bar-volume-fill = 
+bar-volume-fill-font = 3
+bar-volume-fill-foreground = ${colors.foreground}
+bar-volume-empty = 
+bar-volume-empty-font = 3
+bar-volume-empty-foreground = ${colors.secondary}
 
 [module/wired]
 type = internal/network
@@ -155,17 +152,17 @@ type = custom/menu
 label-active-font = 1
 format-spacing = 1
 label-open = 
-label-open-underline = ${colors.secondary}
+label-open-foreground = ${colors.active}
 label-close = 
-label-close-foreground = #E20049
+label-close-foreground = ${colors.urgent}
 label-separator = |
 label-separator-foreground = ${colors.secondary}
 
 menu-0-0 = reboot
-menu-0-0-foreground = #FFCC66
+menu-0-0-foreground = ${colors.foreground}
 menu-0-0-exec = reboot
 menu-0-1 = power off
-menu-0-1-foreground = #FFCC66
+menu-0-1-foreground = ${colors.foreground}
 menu-0-1-exec = poweroff
 
 [module/spotify]

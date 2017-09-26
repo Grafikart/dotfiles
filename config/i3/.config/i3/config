@@ -19,7 +19,7 @@ set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
 # class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background #303040     $foreground    #2e9ef4   $active
+client.focused          $background #303040     $foreground    #FFCC66   $active
 client.focused_inactive $background #303040 	$foreground    #484e50   $inactive
 client.unfocused        $background $background $inactive      #292d2e   $inactive
 client.urgent           $active     $active    	$background    #900000   $active
@@ -44,7 +44,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -display-run ":"
 
 # Changement du Focus
 bindsym $mod+j focus left
@@ -194,17 +194,17 @@ bindsym $mod+Shift+agrave move container to workspace $ws10; workspace $ws10
 
 # Force certaines apps à des wokspaces dédiés
 # Workspace 1 (Code)
-assign [class="jetbrains-idea|Code"]                            $ws1
+assign [class="jetbrains-idea|Code"]                    $ws1
 # Workspace 5 (Ecran gauche, Tchat)
-assign [class="discord|skypeforlinux|Skype Preview"]                          $ws5
+assign [class="discord|skypeforlinux|Skype Preview"]    $ws5
 # Workspace 6 (Ecran gauche, Versioning)
-assign [class="GitKraken"]                                      $ws6
+assign [class="GitKraken"]                              $ws6
 for_window [class="GitKraken"] focus
 # Workspace 7 (Ecran droite, Navigateur)
 # assign [class="Google-chrome|Vivaldi-stable|Opera|Firefox"]     $ws7
 # Workspace 8 (Ecran droite, Music)
-assign [class="Spotify"]                                        $ws8
-for_window [class="Spotify"]                  move to workspace $ws8
+assign [class="Spotify"]                                $ws8
+for_window [class="Spotify"]          move to workspace $ws8
 
 ###############################
 #            MISC             #
@@ -220,10 +220,13 @@ exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+# Désactive capslock 
+exec --no-startup-id setxkbmap -option caps:none
+
 # I3 Gaps
 for_window [class="^.*"] border pixel 2
 for_window [class=".*"] title_format "  %title"
-gaps inner 5
+gaps inner 0
 smart_borders on
 smart_gaps on
 
