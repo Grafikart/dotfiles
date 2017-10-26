@@ -45,7 +45,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
-bindsym $mod+d exec rofi -show run -display-run ":"
+bindsym $mod+d exec rofi -show drun -display-run ":"
 
 # Changement du Focus
 bindsym $mod+j focus left
@@ -135,7 +135,7 @@ bindsym Print exec xfce4-screenshooter
 #          SOURIS             #
 ###############################
 # Quand le focus change d'écran, ne pas déplacer la souris
-# mouse_warping none
+exec_always --no-startup-id ~/.config/i3/mousespeed.sh
 
 ###############################
 #        WORKSPACES           #
