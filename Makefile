@@ -12,7 +12,6 @@ installdev: install
 	xargs -d '\n' -a packages/dev.list yay --noconfirm -S
 
 i3:
-	$(stow) urxvt
 	$(stow) termite
 	xrdb ~/.Xresources
 	$(stow) fish
