@@ -37,7 +37,7 @@ exec_always --no-startup-id ~/.config/i3/unsplash-wallpaper.sh
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -cd "`xcwd`"
+bindsym $mod+Return exec cd $(xcwd) && exec termite
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -45,7 +45,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
-bindsym $mod+d exec rofi -show drun -display-run ":"
+bindsym $mod+d exec rofi -show run -display-run ":"
 
 # Changement du Focus
 bindsym $mod+j focus left
