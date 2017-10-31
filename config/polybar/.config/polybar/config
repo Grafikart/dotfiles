@@ -2,12 +2,12 @@
 ; Wiki: https://github.com/jaagr/polybar/wiki
 
 [colors]
-active = ${xrdb:active}
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
-urgent = ${xrdb:color1}
-secondary = ${xrdb:secondary}
-underline = ${xrdb:active}
+active = #259E83
+background = #1D1D26
+foreground = #B3B3D4
+urgent = #E20049
+secondary = #535172
+underline =  #259E83
 
 [bar/default]
 height = 32

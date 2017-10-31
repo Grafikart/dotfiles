@@ -12,19 +12,13 @@ set $alt Mod1
 # Police à utiliser
 font pango: SFNS Display 10
 
-# Couleurs
-set_from_resource       $active       active
-set_from_resource       $inactive     secondary
-set_from_resource       $background   background
-set_from_resource       $foreground   foreground
-
-# class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background #303040     $foreground    #FFCC66   $active
-client.focused_inactive $background #303040 	$foreground    #484e50   $inactive
-client.unfocused        $background $background $inactive      #292d2e   $inactive
-client.urgent           $active     $active    	$background    #900000   $active
-client.placeholder      $background $background $foreground    #000000   $inactive
-client.background       $background
+# class			border	    backgr.   	text	   indicat   child_border
+client.focused          #1D1D26     #303040     #B3B3D4    #FFCC66   #259E83
+client.focused_inactive #1D1D26     #303040 	#B3B3D4    #484e50   #535172
+client.unfocused        #1D1D26     #1D1D26     #535172    #292d2e   #535172
+client.urgent           #259E83     #259E83    	#1D1D26    #900000   #259E83
+client.placeholder      #1D1D26     #1D1D26     #B3B3D4    #000000   #535172
+client.background       #1D1D26
 
 # Fond d'écran
 # exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
