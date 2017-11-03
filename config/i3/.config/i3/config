@@ -12,13 +12,19 @@ set $alt Mod1
 # Police à utiliser
 font pango: SFNS Display 10
 
-# class			border	    backgr.   	text	   indicat   child_border
-client.focused          #1D1D26     #303040     #B3B3D4    #FFCC66   #259E83
-client.focused_inactive #1D1D26     #303040 	#B3B3D4    #484e50   #535172
-client.unfocused        #1D1D26     #1D1D26     #535172    #292d2e   #535172
-client.urgent           #259E83     #259E83    	#1D1D26    #900000   #259E83
-client.placeholder      #1D1D26     #1D1D26     #B3B3D4    #000000   #535172
-client.background       #1D1D26
+# Couleurs
+set_from_resource       $active       active
+set_from_resource       $inactive     secondary
+set_from_resource       $background   background
+set_from_resource       $foreground   foreground
+
+# class			border	    backgr.   	text	       indicat   child_border
+client.focused          $background #303040     $foreground    #FFCC66   $active
+client.focused_inactive $background #303040 	$foreground    #484e50   $inactive
+client.unfocused        $background $background $inactive      #292d2e   $inactive
+client.urgent           $active     $active    	$background    #900000   $active
+client.placeholder      $background $background $foreground    #000000   $inactive
+client.background       $background
 
 # Fond d'écran
 # exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
@@ -31,7 +37,7 @@ exec_always --no-startup-id ~/.config/i3/unsplash-wallpaper.sh
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec cd $(xcwd) && exec termite
+bindsym $mod+Return exec urxvt -cd "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -39,7 +45,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
-bindsym $mod+d exec rofi -show run -display-run ":"
+bindsym $mod+d exec rofi -show drun -display-run ":"
 
 # Changement du Focus
 bindsym $mod+j focus left
@@ -69,7 +75,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+x layout toggle split
 bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
@@ -84,8 +90,12 @@ bindsym $mod+q focus parent
 # Rechargement / Actualisation de la configuration
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+
 # Quitter i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Ouvrir l'exploreur de fichier
+bindsym $mod+e exec pcmanfm "`xcwd`"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -187,6 +197,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+ccedilla move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10; workspace $ws10
 
+# Taille des fenêtres flottantes
+floating_minimum_size 75 x 50
+floating_maximum_size -1 x -1
+
 # Force certaines apps à des wokspaces dédiés
 # Workspace 1 (Code)
 assign [class="jetbrains-idea|Code"]                    $ws1
@@ -200,6 +214,7 @@ for_window [class="GitKraken"] focus
 # Workspace 8 (Ecran droite, Music)
 assign [class="Spotify"]                                $ws8
 for_window [class="Spotify"]          move to workspace $ws8
+for_window [class="Pcmanfm|Nautilus|Thunar"] floating enable
 
 ###############################
 #            MISC             #
