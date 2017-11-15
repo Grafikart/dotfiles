@@ -19,16 +19,16 @@ set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
 # class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background #303040     $foreground    #FFCC66   $active
-client.focused_inactive $background #303040 	$foreground    #484e50   $inactive
-client.unfocused        $background $background $inactive      #292d2e   $inactive
+client.focused          $background #222D32     $foreground    #FFCC66   $active
+client.focused_inactive $background #222D32 	$foreground    #484e50   $inactive
+client.unfocused        $background #182125     $inactive      #292d2e   $inactive
 client.urgent           $active     $active    	$background    #900000   $active
 client.placeholder      $background $background $foreground    #000000   $inactive
 client.background       $background
 
 # Fond d'écran
 # exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
-exec_always --no-startup-id ~/.config/i3/unsplash-wallpaper.sh
+exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
 
 ###############################
 #         KEYBINDING          #
@@ -45,7 +45,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
-bindsym $mod+d exec rofi -show drun -display-run ":"
+bindsym $mod+d exec rofi -show run -display-run ":"
 
 # Changement du Focus
 bindsym $mod+j focus left
@@ -105,16 +105,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym m resize grow width 5 px or 5 ppt
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym m resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -214,7 +214,7 @@ for_window [class="GitKraken"] focus
 # Workspace 8 (Ecran droite, Music)
 assign [class="Spotify"]                                $ws8
 for_window [class="Spotify"]          move to workspace $ws8
-for_window [class="Pcmanfm|Nautilus|Thunar"] floating enable
+for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel"] floating enable
 
 ###############################
 #            MISC             #

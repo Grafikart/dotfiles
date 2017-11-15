@@ -5,9 +5,13 @@
 active = ${xrdb:active}
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
-urgent = ${xrdb:color1}
+urgent = ${xrdb:color9}
 secondary = ${xrdb:secondary}
-underline = ${xrdb:active}
+underline = ${xrdb:color3}
+ram = ${xrdb:color14}
+cpu = ${xrdb:color13}
+spotify = ${xrdb:color10}
+power= ${colors.urgent}
 
 [bar/default]
 height = 32
@@ -49,8 +53,9 @@ modules-right = cpu memory i3
 [bar/right]
 inherit = bar/default
 monitor = DVI-D-0
-modules-left = i3 volume date
-modules-right = 
+modules-left = i3 
+modules-center = date
+modules-right = volume
 padding-left = 3
 
 [module/i3]
@@ -73,17 +78,19 @@ label-visible-padding = 2
 label-urgent = %index%  %icon%
 label-urgent-padding = 2
 label-focused-foreground = ${colors.active}
+label-focused-background = #29373d
+label-focused-underline = ${colors.underline}
 label-visible-foreground = ${colors.active}
 label-unfocused-foreground = ${colors.secondary}
 label-urgent-foreground = ${colors.urgent} 
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
-ws-icon-6 = 7;
+ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
 
@@ -105,20 +112,20 @@ interval = 2
 format = <label>
 format-prefix = "  "
 label = %percentage%%
-format-foreground = ${colors.active}
-label-foreground = ${colors.foreground}
+format-foreground = ${colors.cpu}
+label-foreground = ${colors.cpu}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
 label = %percentage_used%%
-format-foreground = ${colors.active}
-label-foreground = ${colors.foreground}
+format-foreground = ${colors.ram}
+label-foreground = ${colors.ram}
 
 [module/date]
 type = internal/date
-date = %{F#259E83}   %{F#535172}%B %d,  %{F#B3B3D4}%H:%M
+date = %{F#88C0D0}   %{F#4C566A}%B %d,  %{F#D8DEE9}%H:%M
 
 [module/volume]
 type = internal/volume
@@ -152,9 +159,9 @@ type = custom/menu
 label-active-font = 1
 format-spacing = 1
 label-open = 
-label-open-foreground = ${colors.active}
+label-open-foreground = ${colors.power}
 label-close = 
-label-close-foreground = ${colors.urgent}
+label-close-foreground = ${colors.power}
 label-separator = |
 label-separator-foreground = ${colors.secondary}
 
@@ -172,8 +179,8 @@ exec = ~/.config/polybar/spotify.sh --title
 click-left = i3-msg workspace 8
 interval = 5
 format=   <label> 
-format-foreground=#00D965
-format-underline = #00D965
+format-foreground= ${colors.spotify}
+format-underline = ${colors.spotify}
 label = %output%
 
 [settings]
