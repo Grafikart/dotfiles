@@ -20,6 +20,7 @@ i3:
 	$(stow) keyboard
 	$(stow) easystroke
 	$(stow) rofi
+	$(stow) vim
 
 xfce:
 	$(stow) xfce4
