@@ -5,8 +5,8 @@
 URxvt*scrollBar:	    false
 URxvt*letterSpace:  	-1
 URxvt.internalBorder: 10
-URxvt*font: 		      xft:Menlo for Powerline:regular:size=14
-URxvt*boldFont:		    xft:Menlo for Powerline:bold:ize=14
+URxvt*font: 		      xft:Menlo for Powerline:regular:size=13
+URxvt*boldFont:		    xft:Menlo for Powerline:bold:size=13
 URxvt*cursorBlink:    true
 URxvt.iso14755:		    false
 URxvt*utf8:			      true
