@@ -14,6 +14,7 @@ let mapleader = ","
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
+Plug 'chr4/nginx.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
