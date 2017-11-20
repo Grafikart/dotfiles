@@ -1,16 +1,17 @@
 filetype plugin indent on
-syntax enable
-set mouse=a
-set hidden
-set laststatus=2
+syntax on
+set autoindent
 set backspace=indent,eol,start
+set hidden
+set hlsearch
+set laststatus=2
+set noshowmode
+set mouse=a
+set noundofile
 set number
 set wildmenu
-set noundofile
-set noshowmode
-set hlsearch
 
-let mapleader = ","
+let mapleader = ","   
 
 call plug#begin('~/.vim/plugged')
 
