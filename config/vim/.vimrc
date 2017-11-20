@@ -8,6 +8,7 @@ set number
 set wildmenu
 set noundofile
 set noshowmode
+set hlsearch
 
 let mapleader = ","
 
