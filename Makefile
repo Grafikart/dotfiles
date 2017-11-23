@@ -21,6 +21,7 @@ i3:
 	$(stow) easystroke
 	$(stow) rofi
 	$(stow) vim
+	$(stow) imwheel
 
 xfce:
 	$(stow) xfce4
