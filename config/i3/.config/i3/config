@@ -27,8 +27,9 @@ client.placeholder      $background $background $foreground    #000000   $inacti
 client.background       $background
 
 # Fond d'écran
-# exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
-exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
+exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
+# exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
+# exec_always --no-startup-id ~/.config/i3/unsplash-wallpaper.sh
 
 ###############################
 #         KEYBINDING          #
@@ -95,7 +96,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Ouvrir l'exploreur de fichier
-bindsym $mod+e exec thunar "`xcwd`"
+bindsym $mod+e exec pcmanfm "`xcwd`"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

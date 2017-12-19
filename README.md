@@ -12,6 +12,13 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 
 # Trucs & Astuces
 
+## DuckDuckGo
+
+Le thème duckduckgo 
+
+- [Nord](https://duckduckgo.com/?key=5b0f273b8be8f4cf98fcd9c441870c9c1cd2a18853ef5467c4172dd597d600b2a87d3d820e757aa4f976d6c877c1303f5bb4bf1844cdfbd6b4f4668abe21152d)
+
+
 ## Tearing Nvidia
 
 Le pilote propriétaire nvidia rajoute un tearing atroce :
