@@ -10,6 +10,8 @@ set mouse=a
 set noundofile
 set number
 set wildmenu
+set autochdir
+set noswapfile
 
 let mapleader = ","   
 

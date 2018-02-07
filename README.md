@@ -16,8 +16,7 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 
 Le thème duckduckgo 
 
-- [Nord](https://duckduckgo.com/?key=5b0f273b8be8f4cf98fcd9c441870c9c1cd2a18853ef5467c4172dd597d600b2a87d3d820e757aa4f976d6c877c1303f5bb4bf1844cdfbd6b4f4668abe21152d)
-
+- [Nord Theme](https://duckduckgo.com/?kae=d&k7=222D32&kj=1d272b&ko=d&kaa=B48EAD&k9=5E81AC&ku=-1&k8=828e9a&kx=A3BE8C&kai=1&k18=-1&kw=n&kg=g&kz=1&kc=-1&kac=-1&kaj=m&kam=bing-maps&kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1)
 
 ## Tearing Nvidia
 
@@ -47,10 +46,4 @@ xmodmap ~/.Xmodmap
 
 ```
 sudo netstat -nlp | grep :80
-```
-
-## Quand le son se met à foirer
-
-```
-pulseaudio -k && sudo alsa force-reload
 ```

@@ -39,7 +39,7 @@ modules-right = cpu memory spotify volume date powermenu
 [bar/center]
 inherit = bar/default
 monitor = DVI-I-1
-modules-right = powermenu
+modules-right = redshift powermenu
 tray-position = right
 tray-detached = false 
 tray-padding = 0
@@ -105,6 +105,11 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.secondary}
+
+[module/redshift]
+type = custom/script
+interval = 5
+exec = ~/.config/polybar/redshift.sh
 
 [module/cpu]
 type = internal/cpu

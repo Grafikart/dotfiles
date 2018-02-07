@@ -27,8 +27,8 @@ client.placeholder      $background $background $foreground    #000000   $inacti
 client.background       $background
 
 # Fond d'écran
-exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
-# exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
+# exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.jpg
+exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
 # exec_always --no-startup-id ~/.config/i3/unsplash-wallpaper.sh
 
 ###############################
