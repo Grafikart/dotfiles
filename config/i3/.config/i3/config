@@ -156,7 +156,9 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $monitorCenter DVI-I-1
+# Ecran en réparation :(
+# set $monitorCenter DVI-I-1
+set $monitorCenter  HDMI-0
 set $monitorLeft   HDMI-0
 set $monitorRight  DVI-D-0
 
@@ -244,4 +246,4 @@ smart_borders on
 smart_gaps on
 
 # Redémarre polybar quand on redémarre i3
-exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
+exec_always --no-startup-id "killall polybar; polybar -r left & polybar -r right"
