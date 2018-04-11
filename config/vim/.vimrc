@@ -26,7 +26,11 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Theme
-colorscheme nord
+try
+    colorscheme nord
+catch /^Vim\%((\a\+)\)\=:E185/
+    " deal with it
+endtry
 let g:lightline = {'colorscheme': 'nord'}
 
 " Buffer
