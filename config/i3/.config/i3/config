@@ -182,7 +182,7 @@ bindsym $mod+underscore workspace $ws8
 bindsym $mod+ccedilla workspace $ws9
 bindsym $mod+agrave workspace $ws10
 bindsym $mod+Tab workspace next
-bindsym $mode+Shift+Tab workspace prev
+bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+j workspace next
