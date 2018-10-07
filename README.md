@@ -20,7 +20,7 @@ Le thème duckduckgo
 
 ## firefox Colors
 
-https://mozilla.github.io/FirefoxColor/?theme=XQAAAALVAAAAAAAAAABBKYhm849SCiazH1KEGccwS-xNVAVXJkEijQa3PoAZ332Ug6Nh9vtrXfuUW8Xe60pkH_aWvF1eMKgONk0AWqMWEMykKU4N64nefi_pG_St3gE7TTfmPnLP-dv9yXr67OnLHi7DDXfo0MYXfbndTynEXwL9dA4jKZKERi_JZ5qZv0fuJrwzEo4fyDzqntSl-NXfBF5oEv_-5KwA
+https://color.firefox.com/?theme=XQAAAAIUAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xNKlhX7p_w-bFKDpbUJasOFEb7xDbBpLNSPVGezz8UbhQdB0GWAOD8ATi6goq1YnVG0pMl-SnqDQaOZUOSxI6hRIBBN9cVab3KfaEVnFT8UNixHiWH8LmtKyl93ZVGkBz-kvmbxdqRTnOGOGFU-foQOhnFUiStVUkW2aOPtoZpBAT0yl-BvxEp9675M_ZheGwrw9AtoVcGBsMl1TfdZDrqm1YIX837L_-cMyoA
 
 ## Tearing Nvidia
 
