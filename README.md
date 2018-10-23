@@ -18,6 +18,10 @@ Le thème duckduckgo
 
 - [Nord Theme](https://duckduckgo.com/?kae=d&k7=222D32&kj=1d272b&ko=d&kaa=B48EAD&k9=5E81AC&ku=-1&k8=828e9a&kx=A3BE8C&kai=1&k18=-1&kw=n&kg=g&kz=1&kc=-1&kac=-1&kaj=m&kam=bing-maps&kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1)
 
+## firefox Colors
+
+https://color.firefox.com/?theme=XQAAAAIUAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xNKlhX7p_w-bFKDpbUJasOFEb7xDbBpLNSPVGezz8UbhQdB0GWAOD8ATi6goq1YnVG0pMl-SnqDQaOZUOSxI6hRIBBN9cVab3KfaEVnFT8UNixHiWH8LmtKyl93ZVGkBz-kvmbxdqRTnOGOGFU-foQOhnFUiStVUkW2aOPtoZpBAT0yl-BvxEp9675M_ZheGwrw9AtoVcGBsMl1TfdZDrqm1YIX837L_-cMyoA
+
 ## Tearing Nvidia
 
 Le pilote propriétaire nvidia rajoute un tearing atroce :
