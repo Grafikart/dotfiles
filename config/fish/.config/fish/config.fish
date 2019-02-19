@@ -20,3 +20,9 @@ set -x PATH $PATH $HOME/.gem/ruby/2.4.0/bin
 # NPM
 set -x PATH $PATH $HOME/.npm-global/bin
 rvm default
+
+# PHP
+set -x PATH $PATH $HOME/.config/composer/vendor/bin
+
+# Neo4J
+set -x PATH $PATH $HOME/.config/neo4j/bin
