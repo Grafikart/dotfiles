@@ -9,6 +9,9 @@ set $alt Mod1
 ###############################
 #          APPARENCE          #
 ###############################
+# Focus la fenêtre au survol
+focus_follows_mouse yes
+
 # Police à utiliser
 font pango: SFNS Display 10
 
@@ -38,7 +41,7 @@ exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh &> ~/bing.log
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -cd "`xcwd`"
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -129,10 +132,10 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 # Play / Pause Spotify
-bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-bindsym XF86AudioPause exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 # Capture d'écran
 bindsym Print exec xfce4-screenshooter
 
@@ -215,8 +218,10 @@ for_window [class="GitKraken"] focus
 # Workspace 7 (Ecran droite, Navigateur)
 # assign [class="Google-chrome|Vivaldi-stable|Opera|Firefox"]     $ws7
 # Workspace 8 (Ecran droite, Music)
+assign [class="MellowPlayer"]                                $ws8
+for_window [class="MellowPlayer"]          move to workspace $ws8
 assign [class="Spotify"]                                $ws8
-for_window [class="Spotify"]          move to workspace $ws8
+for_window [class="Spotify"]           move to workspace $ws8
 for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel"] floating enable
 
 ###############################
@@ -228,7 +233,7 @@ for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel"] floating enable
 exec --no-startup-id nvidia-settings --load-config-only
 exec --no-startup-id compton
 exec --no-startup-id discord
-exec --no-startup-id spotify
+exec --no-startup-id MellowPlayer
 exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 # Pamac Manager a besoin de ça pour gérer l'authentification

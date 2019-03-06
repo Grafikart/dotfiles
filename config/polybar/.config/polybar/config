@@ -34,7 +34,7 @@ font-2 = MaterialIcons:size=11;4
 
 modules-left = i3
 modules-center = xwindow
-modules-right = cpu memory spotify volume date powermenu
+modules-right = cpu memory volume date powermenu
 
 [bar/center]
 inherit = bar/default
@@ -53,7 +53,7 @@ modules-right = cpu memory i3
 [bar/right]
 inherit = bar/default
 monitor = DVI-D-0
-modules-left = i3 
+modules-left = i3 music
 modules-center = date
 modules-right = volume
 padding-left = 3
@@ -177,15 +177,14 @@ menu-0-1 = power off
 menu-0-1-foreground = ${colors.foreground}
 menu-0-1-exec = poweroff
 
-[module/spotify]
+[module/music]
 type = custom/script
-exec-if = ~/.config/polybar/spotify.sh --isPlaying
-exec = ~/.config/polybar/spotify.sh --title
+exec-if = ~/.config/polybar/music.sh --isPlaying
+exec = ~/.config/polybar/music.sh --title
 click-left = i3-msg workspace 8
 interval = 5
-format=   <label> 
+format= <label> 
 format-foreground= ${colors.spotify}
-format-underline = ${colors.spotify}
 label = %output%
 
 [settings]
