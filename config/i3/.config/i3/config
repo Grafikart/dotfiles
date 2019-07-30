@@ -41,7 +41,7 @@ exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh &> ~/bing.log
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt -cd "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -99,7 +99,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Ouvrir l'exploreur de fichier
-bindsym $mod+e exec pcmanfm "`xcwd`"
+bindsym $mod+e exec pcmanfm "Téléchargements"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -245,7 +245,7 @@ exec --no-startup-id setxkbmap -option caps:none
 # I3 Gaps
 for_window [class="^.*"] border pixel 2
 for_window [class=".*"] title_format "  %title"
-gaps inner 10
+gaps inner 0
 smart_borders on
 smart_gaps on
 

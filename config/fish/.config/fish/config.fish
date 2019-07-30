@@ -1,6 +1,7 @@
 # Alias
 alias cr "composer require "
 alias phpd "php -S localhost:8000 -ddisplay_errors=1 -dzend_extension=xdebug.so -dxdebug.remote_enable=1 -dxdebug.remote_autostart=1"
+alias sy "php bin/console "
 alias remove "pacaur -Rns"
 
 # Android
@@ -11,7 +12,7 @@ set -x ANDROID_HOME $HOME/.android
 # set -x PATH $PATH $JAVA_HOME/bin
 
 # golang
-set -x GOPATH $HOME/.config/go
+set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
 # Ruby
