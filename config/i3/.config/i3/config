@@ -10,7 +10,7 @@ set $alt Mod1
 #          APPARENCE          #
 ###############################
 # Focus la fenêtre au survol
-focus_follows_mouse yes
+focus_follows_mouse no
 
 # Police à utiliser
 font pango: SFNS Display 10
@@ -22,9 +22,9 @@ set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
 # class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background #222D32     $foreground    #FFCC66   $active
-client.focused_inactive $background #222D32 	$foreground    #484e50   $inactive
-client.unfocused        $background #182125     $inactive      #292d2e   $inactive
+client.focused          $background #2A2D3D     $inactive     #FFCC66   $active
+client.focused_inactive $background #2A2D3D 	$inactive    #5E6386   $inactive
+client.unfocused        $background #222431     $inactive      #34384D   $inactive
 client.urgent           $active     $active    	$background    #900000   $active
 client.placeholder      $background $background $foreground    #000000   $inactive
 client.background       $background
@@ -99,7 +99,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Ouvrir l'exploreur de fichier
-bindsym $mod+e exec pcmanfm "Téléchargements"
+bindsym $mod+e exec nautilus "Téléchargements"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

@@ -26,12 +26,12 @@ Xft.hintstyle:		  hintslight
 ! ============
 !   Couleurs
 ! ============
-*secondary:  #4C566A
-*active:     #D8DEE9
+*secondary:  #5E6386
+*active:     #C0C7D4
 
-#define nord0 #222D32
+#define nord0 #2A2D3D
 #define nord1 #3B4252
-#define nord2 #434C5E
+#define  nord2 #434C5E
 #define nord3 #4C566A
 #define nord4 #D8DEE9
 #define nord5 #E5E9F0
@@ -40,11 +40,11 @@ Xft.hintstyle:		  hintslight
 #define nord8 #88C0D0
 #define nord9 #81A1C1
 #define nord10 #5E81AC
-#define nord11 #BF616A
+#define nord11 #EE6174
 #define nord12 #D08770
-#define nord13 #EBCB8B
-#define nord14 #A3BE8C
-#define nord15 #B48EAD
+#define nord13 #F8CD7A
+#define nord14 #CAE797
+#define nord15 #BF94E5
 
 *.foreground:   nord4
 *.background:   nord0

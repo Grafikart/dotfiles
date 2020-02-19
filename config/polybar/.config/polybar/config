@@ -33,7 +33,7 @@ font-1 = FontAwesome:size=11;3
 font-2 = MaterialIcons:size=11;4
 
 modules-left = i3
-modules-center = xwindow
+modules-center = 
 modules-right = cpu memory volume date powermenu
 
 [bar/center]
@@ -78,7 +78,7 @@ label-visible-padding = 2
 label-urgent = %index%  %icon%
 label-urgent-padding = 2
 label-focused-foreground = ${colors.active}
-label-focused-background = #29373d
+label-focused-background = #2F3344
 label-focused-underline = ${colors.underline}
 label-visible-foreground = ${colors.active}
 label-unfocused-foreground = ${colors.secondary}
