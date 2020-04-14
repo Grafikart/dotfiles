@@ -3,13 +3,10 @@ alias cr "composer require "
 alias phpd "php -S localhost:8000 -ddisplay_errors=1 -dzend_extension=xdebug.so -dxdebug.remote_enable=1"
 alias sy "php bin/console "
 alias remove "pacaur -Rns"
-
-# Fonctions 
-function docker-clean --description "Drops unused and temporary images"
-  docker kill (docker ps -q)
-  docker rm (docker ps -a -q -f status=exited)
-  docker rmi (docker images -q)
-end
+# Docker
+alias dk "docker kill (docker ps -q)"
+alias de "docker-compose exec"
+alias dprune "docker system prune --filter \"until=720h\" && docker volume prune"
 
 # Android
 set -x EDITOR /usr/bin/vim

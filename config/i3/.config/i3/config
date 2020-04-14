@@ -231,9 +231,8 @@ for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel"] floating enable
 # exec --no-startup-id ~/.config/i3/alternating_layouts.py
 # Applications au démarrage
 exec --no-startup-id nvidia-settings --load-config-only
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id discord
-exec --no-startup-id MellowPlayer
 exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 # Pamac Manager a besoin de ça pour gérer l'authentification
