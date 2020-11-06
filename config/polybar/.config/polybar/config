@@ -17,7 +17,7 @@ power= ${colors.urgent}
 height = 32
 offset-y = 0
 top = true
-fixed-center = true 
+fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -33,7 +33,7 @@ font-1 = FontAwesome:size=11;3
 font-2 = MaterialIcons:size=11;4
 
 modules-left = i3
-modules-center = 
+modules-center =
 modules-right = cpu memory volume date powermenu
 
 [bar/center]
@@ -41,13 +41,13 @@ inherit = bar/default
 monitor = DVI-I-1
 modules-right = redshift powermenu
 tray-position = right
-tray-detached = false 
+tray-detached = false
 tray-padding = 0
 
 [bar/left]
 inherit = bar/default
 monitor = HDMI-0
-modules-left = 
+modules-left =
 modules-right = cpu memory i3
 
 [bar/right]
@@ -82,7 +82,7 @@ label-focused-background = #2F3344
 label-focused-underline = ${colors.underline}
 label-visible-foreground = ${colors.active}
 label-unfocused-foreground = ${colors.secondary}
-label-urgent-foreground = ${colors.urgent} 
+label-urgent-foreground = ${colors.urgent}
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -183,9 +183,14 @@ exec-if = ~/.config/polybar/music.sh --isPlaying
 exec = ~/.config/polybar/music.sh --title
 click-left = i3-msg workspace 8
 interval = 5
-format= <label> 
+format= <label>
 format-foreground= ${colors.spotify}
 label = %output%
+
+[module/vpn]
+type = custom/script
+exec =  ~/.config/polybar/vpn.sh
+interval = 5
 
 [settings]
 screenchange-reload = true

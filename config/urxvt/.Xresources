@@ -26,45 +26,28 @@ Xft.hintstyle:		  hintslight
 ! ============
 !   Couleurs
 ! ============
-*secondary:  #5E6386
-*active:     #C0C7D4
+*secondary:  #444B6A
+*active:     #C0CAF5
 
-#define nord0 #2A2D3D
-#define nord1 #3B4252
-#define  nord2 #434C5E
-#define nord3 #4C566A
-#define nord4 #D8DEE9
-#define nord5 #E5E9F0
-#define nord6 #ECEFF4
-#define nord7 #8FBCBB
-#define nord8 #88C0D0
-#define nord9 #81A1C1
-#define nord10 #5E81AC
-#define nord11 #EE6174
-#define nord12 #D08770
-#define nord13 #F8CD7A
-#define nord14 #CAE797
-#define nord15 #BF94E5
+*.foreground:   #1E202E
+*.background:   #1A1B26
+*.cursorColor:  #C0CAF5
+* fading: 20
+*fadeColor: #5A638C
 
-*.foreground:   nord4
-*.background:   nord0
-*.cursorColor:  nord4
-*fading: 20
-*fadeColor: nord3
-
-*.color0: nord1
-*.color1: nord11
-*.color2: nord14
-*.color3: nord13
-*.color4: nord9
-*.color5: nord15
-*.color6: nord8
-*.color7: nord5
-*.color8: nord3
-*.color9: nord11
-*.color10: nord14
-*.color11: nord13
-*.color12: nord9
-*.color13: nord15
-*.color14: nord7
-*.color15: nord6
+*.color0: #5A638C
+*.color1: #DB4B4B
+*.color2: #CAE797
+*.color3: #F8CD7A
+*.color4: #6183BB
+*.color5: #BB9AF7
+*.color6: #41A6B5
+*.color7: #C0CAF5
+*.color8: #5A638C
+*.color9: #DB4B4B
+*.color10: #9ECE6A
+*.color11: #E0AF68
+*.color12: #7AA2F7
+*.color13: #BB9AF7
+*.color14: #89DDFF
+*.color15: #C0CAF5

@@ -12,15 +12,11 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 
 # Trucs & Astuces
 
-## DuckDuckGo
+## Thêmes
 
-Le thème duckduckgo 
-
-- [Nord Theme](https://duckduckgo.com/?kae=d&k7=222D32&kj=1d272b&ko=d&kaa=B48EAD&k9=5E81AC&ku=-1&k8=828e9a&kx=A3BE8C&kai=1&k18=-1&kw=n&kg=g&kz=1&kc=-1&kac=-1&kaj=m&kam=bing-maps&kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1)
-
-## firefox Colors
-
-https://color.firefox.com/?theme=XQAAAAIUAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xNKlhX7p_w-bFKDpbUJasOFEb7xDbBpLNSPVGezz8UbhQdB0GWAOD8ATi6goq1YnVG0pMl-SnqDQaOZUOSxI6hRIBBN9cVab3KfaEVnFT8UNixHiWH8LmtKyl93ZVGkBz-kvmbxdqRTnOGOGFU-foQOhnFUiStVUkW2aOPtoZpBAT0yl-BvxEp9675M_ZheGwrw9AtoVcGBsMl1TfdZDrqm1YIX837L_-cMyoA
+- [Duckduckgo](https://duckduckgo.com/?kae=d&kao=-1&kau=-1&kak=-1&kax=-1&k5=1&kap=-1&kaq=-1&kah=ca-en%2Cbe-nl&kl=wt-wt&k7=1a1b26&kaa=BB9AF7&kj=16161e&k21=16161E&k18=-1&kx=1abc9c&kt=e&ka=e&k9=C0CAF5&k8=6183BB)
+- [PHPStorm](https://github.com/Grafikart/tokyo-night-jetbrains-theme)
+- [VScode](https://github.com/enkia/tokyo-night-vscode-theme)
 
 ## Tearing Nvidia
 

@@ -22,10 +22,10 @@ set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
 # class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background #2A2D3D     $inactive     #FFCC66   $active
-client.focused_inactive $background #2A2D3D 	$inactive    #5E6386   $inactive
-client.unfocused        $background #222431     $inactive      #34384D   $inactive
-client.urgent           $active     $active    	$background    #900000   $active
+client.focused          $background $background $active        #F8CD7A   $active
+client.focused_inactive $background $background inactive       #5A638C   $inactive
+client.unfocused        $background #16161E     $inactive      #34384D   $inactive
+client.urgent           $active     $active    	$background    #DB4B4B   $active
 client.placeholder      $background $background $foreground    #000000   $inactive
 client.background       $background
 
@@ -235,6 +235,7 @@ exec --no-startup-id picom
 exec --no-startup-id discord
 exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
+exec --no-startup-id nm-applet --sm-disable
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
