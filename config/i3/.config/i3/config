@@ -222,7 +222,7 @@ assign [class="MellowPlayer"]                                $ws8
 for_window [class="MellowPlayer"]          move to workspace $ws8
 assign [class="Spotify"]                                $ws8
 for_window [class="Spotify"]           move to workspace $ws8
-for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel"] floating enable
+for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel|kruler"] floating enable
 
 ###############################
 #            MISC             #
