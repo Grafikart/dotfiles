@@ -12,6 +12,7 @@ installdev: install
 	xargs -d '\n' -a packages/dev.list yay --noconfirm --needed -S
 
 i3:
+	$(stow) urxvt
 	xrdb ~/.Xresources
 	$(stow) fish
 	$(stow) i3

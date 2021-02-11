@@ -30,9 +30,7 @@ client.placeholder      $background $background $foreground    #000000   $inacti
 client.background       $background
 
 # Fond d'écran
-# exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.png
-exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh &> ~/bing.log
-# exec_always --no-startup-id ~/.config/i3/unsplash-wallpaper.sh
+exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
 
 ###############################
 #         KEYBINDING          #
@@ -227,8 +225,6 @@ for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel|kruler"] floating enable
 ###############################
 #            MISC             #
 ###############################
-# Splits "inteligent"
-# exec --no-startup-id ~/.config/i3/alternating_layouts.py
 # Applications au démarrage
 exec --no-startup-id nvidia-settings --load-config-only
 exec --no-startup-id picom
@@ -236,6 +232,7 @@ exec --no-startup-id discord
 exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 exec --no-startup-id nm-applet --sm-disable
+exec --no-startup-id xmodmap ~/.Xmodmap
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
