@@ -8,26 +8,11 @@ alias dk "docker kill (docker ps -q)"
 alias de "docker-compose exec"
 alias dprune "docker system prune --filter \"until=720h\" && docker volume prune"
 
-# Android
-set -x EDITOR /usr/bin/vim
-set -x TERM xterm
-set -x ANDROID_HOME $HOME/.android
-# set -x JAVA_HOME /usr/lib/jvm/java-8-jdk
-# set -x PATH $PATH $JAVA_HOME/bin
-
-# golang
-set -x GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
-
-# Ruby
-set -x PATH $PATH $HOME/.gem/ruby/2.4.0/bin
-
 # NPM
 set -x PATH $PATH $HOME/.npm-global/bin
-rvm default
 
 # PHP
 set -x PATH $PATH $HOME/.config/composer/vendor/bin
-
-# Neo4J
-set -x PATH $PATH $HOME/.config/neo4j/bin
+set -x PATH $PATH $HOME/.bin
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH

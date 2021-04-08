@@ -47,7 +47,10 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+Q kill
 
 # Rofi comme lanceur d'application
-bindsym $mod+d exec rofi -show run -display-run ":"
+# bindsym $mod+d exec rofi -show run -display-run ":"
+bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
+                -columns 1 -padding 10 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
 
 # Changement du Focus
 bindsym $mod+j focus left
@@ -135,7 +138,7 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 # Capture d'écran
-bindsym Print exec xfce4-screenshooter
+bindsym Print exec flameshot gui --path ~/Téléchargements
 
 ###############################
 #          SOURIS             #
@@ -220,7 +223,7 @@ assign [class="MellowPlayer"]                                $ws8
 for_window [class="MellowPlayer"]          move to workspace $ws8
 assign [class="Spotify"]                                $ws8
 for_window [class="Spotify"]           move to workspace $ws8
-for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel|kruler"] floating enable
+# for_window [class="Pcmanfm|Nautilus|Thunar|Toplevel|kruler"] floating enable
 
 ###############################
 #            MISC             #
@@ -236,7 +239,7 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# Désactive capslock 
+# Désactive capslock
 exec --no-startup-id setxkbmap -option caps:none
 
 # I3 Gaps

@@ -18,9 +18,54 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 - [PHPStorm](https://github.com/Grafikart/tokyo-night-jetbrains-theme)
 - [VScode](https://github.com/enkia/tokyo-night-vscode-theme)
 
-## Tearing Nvidia
+## Nvidia problems
 
-Le pilote propriétaire nvidia rajoute un tearing atroce :
+### LightDM démarre avant nvidia
+
+Source : https://endeavouros.com/docs/hardware-and-network/graphic-cards-gpu-driver-and-setup/nvidia/nvidia-optional-enhancements-and-troubleshooting/
+
+On commence par forcer le modeset au niveau du grub en éditant `/etc/default/grub` et en ajoutant `nvidia-drm.modeset=1` dans la partie `GRUB_CMDLINE_LINUX_DEFAULT`
+
+```
+# GRUB boot loader configuration
+
+GRUB_DEFAULT=0 GRUB_TIMEOUT=5
+
+GRUB_DISTRIBUTOR="EndeavourOS"
+
+GRUB_CMDLINE_LINUX_DEFAULT="nvidia-drm.modeset=1 resume=UUID=
+```
+
+On reconstruit grub après coup
+
+```bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+On force ensuite le early load KMS en modifiant `/etc/mkinitcpio.conf`
+
+```
+# vim:set ft=sh
+# MODULES
+# The following modules are loaded before any boot hooks are
+# run. Advanced users may wish to specify all system modules
+# in this array. For instance:
+# MODULES="piix ide_disk reiserfs"
+
+MODULES="nvidia"
+
+# BINARIES ....
+```
+
+On reconstruit ensuite l'image du kernel
+
+```bash
+sudo mkinitcpio -P
+```
+
+Et on reboot !
+
+### Tearing
 
 - Utiliser nvidia settings pour gérer les settings
 - Exporter la configuration et ajouter  `{ ForceCompositionPipeline = On }` dans la partie metamodes de "Screen"
