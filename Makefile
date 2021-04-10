@@ -20,6 +20,7 @@ i3:
 	# $(stow) picom
 	$(stow) keyboard
 	$(stow) easystroke
+	$(stow) dunst
 	# $(stow) rofi
 	$(stow) vim
 	# $(stow) imwheel
