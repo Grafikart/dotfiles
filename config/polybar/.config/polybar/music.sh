@@ -4,15 +4,11 @@ path="/org/mpris/MediaPlayer2"
 cmd="org.freedesktop.DBus.Properties.Get"
 
 getTitle() {
-  artist=$(playerctl metadata artist)
-  album=$(playerctl metadata album)
-  title=$(playerctl metadata title)
-
-  echo "${*:-%artist% - %title%}" | sed "s/%artist%/$artist/g;s/%title%/$title/g;s/%album%/$album/g"i | sed 's/&/\\&/g'
+  playerctl metadata --format "{{ artist }} - {{ title }}"
 }
 
 isPlaying() {
-  status=$(playerctl status)
+  status=$(playerctl metadata --format '{{status}}')
   if [ "${status}" = "Playing" ]; then
     echo $status; exit
   fi
