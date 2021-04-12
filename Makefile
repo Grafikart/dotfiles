@@ -23,7 +23,7 @@ i3:
 	$(stow) dunst
 	# $(stow) rofi
 	$(stow) vim
-	# $(stow) imwheel
+	$(stow) gitnow
 
 xfce:
 	$(stow) xfce4
