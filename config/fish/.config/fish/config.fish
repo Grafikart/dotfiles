@@ -16,3 +16,6 @@ set -x PATH $PATH $HOME/.config/composer/vendor/bin
 set -x PATH $PATH $HOME/.bin
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+# SSH Agent
+eval (ssh-agent -c) > /dev/null
