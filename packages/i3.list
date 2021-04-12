@@ -4,6 +4,8 @@ i3-gaps
 polybar
 rofi
 rxvt-unicode
+urxvt-resize-font-git
 xcwd-git
 flameshot
 playerctl
+mpv

@@ -24,6 +24,8 @@ i3:
 	# $(stow) rofi
 	$(stow) vim
 	$(stow) gitnow
+	$(stow) bin
+	$(stow) mpv
 
 xfce:
 	$(stow) xfce4
