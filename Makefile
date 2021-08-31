@@ -17,7 +17,7 @@ i3:
 	$(stow) fish
 	$(stow) i3
 	$(stow) polybar
-	# $(stow) picom
+	$(stow) picom
 	$(stow) keyboard
 	$(stow) easystroke
 	$(stow) dunst

@@ -1,0 +1,2 @@
+#!/bin/bash
+pactl unload-module module-echo-cancel 
