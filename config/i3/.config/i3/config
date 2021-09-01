@@ -50,7 +50,8 @@ bindsym $mod+Shift+Q kill
 # bindsym $mod+d exec rofi -show run -display-run ":"
 bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
                 -columns 1 -padding 10 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11" \
+                -config ~/.config/rofi/config.rasi
 
 # Changement du Focus
 bindsym $mod+j focus left

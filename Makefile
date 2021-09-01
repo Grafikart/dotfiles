@@ -21,7 +21,7 @@ i3:
 	$(stow) keyboard
 	$(stow) easystroke
 	$(stow) dunst
-	# $(stow) rofi
+	$(stow) rofi
 	$(stow) vim
 	$(stow) gitnow
 	$(stow) bin
