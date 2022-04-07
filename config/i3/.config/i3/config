@@ -139,7 +139,7 @@ bindsym XF86AudioPause exec playerctl --all-players play-pause
 bindsym XF86AudioNext exec playerctl --all-players next
 bindsym XF86AudioPrev exec playerctl --all-players previous
 # Capture d'écran
-bindsym Print exec flameshot gui --path ~/Téléchargements
+bindsym Print exec flameshot gui
 
 ###############################
 #          SOURIS             #
@@ -237,6 +237,7 @@ exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 exec --no-startup-id nm-applet --sm-disable
 exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id ~/Sites/Lab/grafisearch/grafisearch
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
