@@ -26,6 +26,8 @@ i3:
 	$(stow) gitnow
 	$(stow) bin
 	$(stow) mpv
+	$(stow) git
+	mv ~/gitignore ~/.gitignore
 
 xfce:
 	$(stow) xfce4

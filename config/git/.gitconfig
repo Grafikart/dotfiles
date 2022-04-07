@@ -1,0 +1,10 @@
+[core]
+	excludesFile = ~/.gitignore
+	autocrlf = input
+[user]
+	name = Jonathan
+	email = contact@grafikart.fr
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
