@@ -47,7 +47,7 @@ tray-padding = 0
 [bar/left]
 inherit = bar/default
 monitor = DP-3
-modules-left = 
+modules-left = date
 modules-right = cpu memory i3
 
 [bar/right]

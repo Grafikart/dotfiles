@@ -27,6 +27,7 @@ i3:
 	$(stow) bin
 	$(stow) mpv
 	$(stow) git
+	$(stow) brave
 	mv ~/gitignore ~/.gitignore
 
 xfce:
