@@ -5,6 +5,7 @@ polybar
 rofi
 rxvt-unicode
 urxvt-resize-font-git
+kitty
 xcwd-git
 flameshot
 playerctl

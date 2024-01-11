@@ -39,7 +39,7 @@ exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -cd "`xcwd`"
+bindsym $mod+Return exec kitty -d "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -101,7 +101,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Ouvrir l'exploreur de fichier
-bindsym $mod+e exec nautilus "Téléchargements"
+bindsym $mod+e exec pcmanfm "Téléchargements"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -237,7 +237,7 @@ exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 exec --no-startup-id nm-applet --sm-disable
 exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id ~/Sites/Lab/grafisearch/grafisearch
+exec --no-startup-id flatpak run com.spotify.Client
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
