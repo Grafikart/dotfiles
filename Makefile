@@ -28,6 +28,7 @@ i3:
 	$(stow) mpv
 	$(stow) git
 	$(stow) brave
+	$(stow) kitty
 	mv ~/gitignore ~/.gitignore
 
 xfce:
