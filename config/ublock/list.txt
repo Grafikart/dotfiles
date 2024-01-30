@@ -1,0 +1,16 @@
+!HackerNews dark theme
+news.ycombinator.com##body, table:style(color: #5D6791 !important; background-color: #1A1B26 !important; )
+news.ycombinator.com##table, tr, td, .pagetop, .score, a, .c00, .subline:style(color: #5D6791 !important; )
+news.ycombinator.com##b:style(color: inherit !important; )
+news.ycombinator.com##.comhead > .hnuser, .sitestr:style(color: #9DCC65 !important; )
+news.ycombinator.com##.c00 > a:style(color: #7AA2F7 !important; )
+news.ycombinator.com##.titleline > a, .comment, .c00:style(color: #C0CAF5 !important; )
+news.ycombinator.com##.titleline > a:visited:style(color: #9D7CD8 !important; )
+!HackerNews readability
+news.ycombinator.com##.comment:style(max-width: 70ch !important; overflow: hidden !important;)
+news.ycombinator.com##.spacer:style(height: 16px !important;)
+news.ycombinator.com##.title:style(font-size: 1rem !important;)
+news.ycombinator.com##form, .reply:style(display: none!important; )
+news.ycombinator.com##.subtext, .comhead, .comment:style(font-size: 0.8rem !important;)
+
+
