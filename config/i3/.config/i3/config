@@ -236,7 +236,7 @@ exec --no-startup-id discord
 exec --no-startup-id easystroke
 exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
 exec --no-startup-id nm-applet --sm-disable
-exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id /usr/bin/xmodmap ~/.Xmodmap
 exec --no-startup-id flatpak run com.spotify.Client
 # Pamac Manager a besoin de ça pour gérer l'authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
