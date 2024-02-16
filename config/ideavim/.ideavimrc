@@ -13,6 +13,8 @@ set incsearch
 set hlsearch
 set number relativenumber
 set visualbell
+set ignorecase=true
+set timeoutlen=750
 
 let mapleader = " "
 
@@ -33,10 +35,14 @@ map Q gq
 "" ========================================================
 " Quick jump
 " https://github.com/easymotion/vim-easymotion?tab=readme-ov-file#example-configuration
+let g:EasyMotion_do_mapping=0
 map s <Plug>(easymotion-bd-f)
 
 "" Leader commands
 "" ========================================================
+" Save
+nnoremap <leader>s :w<CR>
+
 " Comment lines
 map gcc <action>(CommentByLineComment)
 
