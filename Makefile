@@ -28,8 +28,12 @@ i3:
 	$(stow) mpv
 	$(stow) git
 	$(stow) brave
-	$(stow) kitty
+	$(stow) wezterm
+	$(stow) lvim
 	mv ~/gitignore ~/.gitignore
+
+dd:
+	$(stow) wezterm
 
 xfce:
 	$(stow) xfce4
