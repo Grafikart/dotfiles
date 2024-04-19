@@ -1,3 +1,5 @@
 #!/bin/bash
 # ffmpeg -f v4l2 -video_size 800x600 -i /dev/video0 -c:v libx264 -preset ultrafast webcam.mp4
-mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg,framerate=30 av://v4l2:/dev/video0 -o ~/Vidéos/webcam.mp4
+# mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg,framerate=30 av://v4l2:/dev/video0 -o ~/Vidéos/webcam.mp4
+# ffmpeg -f v4l2 -framerate 30 -video_size 1920x1080 -i /dev/video0 -c:v yuyv422 -preset ultrafast ~/Vidéos/webcam.mp4
+ffmpeg -f v4l2 -framerate 30 -video_size 1920x1080 -input_format mjpeg -i /dev/video0 -preset faster ~/Vidéos/webcam.mkv

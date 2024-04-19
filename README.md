@@ -92,3 +92,8 @@ xmodmap ~/.Xmodmap
 ```
 sudo netstat -nlp | grep :80
 ```
+
+## Chemin à connaitre
+
+- `~/.config/mimeapps.list`, association de fichiers
+- `/usr/share/applications/`, localisation des `.desktop`

@@ -1,0 +1,3 @@
+#!/bin/bash
+# Creates a simple fileserver using caddy
+caddy file-server --listen :8000 --browse
