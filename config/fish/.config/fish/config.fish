@@ -1,6 +1,5 @@
 # Alias
 alias cr "composer require "
-alias phpd "php -S localhost:8000 -ddisplay_errors=1 -dzend_extension=xdebug.so -dxdebug.remote_enable=1"
 alias sy "php bin/console "
 alias remove "pacaur -Rns"
 
@@ -15,17 +14,21 @@ alias sail "bash vendor/bin/sail"
 # SSH agent
 set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-# NPM
-set -x PATH $PATH $HOME/.npm-global/bin
-
 # PHP
 set -x PATH $PATH $HOME/.config/composer/vendor/bin
-set -x PATH $PATH $HOME/.bin
 
-# Volta
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+# Local bin
+set -gx PATH "$HOME/.local/bin" $PATH
+set -x PATH $PATH $HOME/.bin
 
 # Golang
 set -gx GOPATH "$HOME/go"
-set -gx PATH "$GOPATH/bin" $PATH 
+set -gx PATH "$GOPATH/bin" $PATH
+
+# Bun
+set -Ux BUN_INSTALL "/home/jonathan/.bun"
+set -px --path PATH "/home/jonathan/.bun/bin"
+
+# Android
+set -gx ANDROID_HOME "$HOME/Android/Sdk"
+
