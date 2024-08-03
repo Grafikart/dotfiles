@@ -18,7 +18,15 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 - [PHPStorm](https://github.com/Grafikart/tokyo-night-jetbrains-theme)
 - [VScode](https://github.com/enkia/tokyo-night-vscode-theme)
 
-## Nvidia problems
+## Problèmes
+
+### Wayland vs x11
+
+Wayland ne semble pas prêt, car je rencontre les problèmes suivants : 
+
+- Glisser / déposer un fichier ne fonctionne pas sur certaines fenêtres (éditeurs / navigateurs)
+- Copier / Coller du texte ne fonctionne pas sur certaines animations
+- Certaines fenêtres clignotent (jetbrains-toolbox)
 
 ### LightDM démarre avant nvidia
 
@@ -69,10 +77,6 @@ Et on reboot !
 
 - Utiliser nvidia settings pour gérer les settings
 - Exporter la configuration et ajouter  `{ ForceCompositionPipeline = On }` dans la partie metamodes de "Screen"
-
-## Remapper les boutons de la souris
-
-[![EasyStroke permet  de remapper les boutons de la souris](screenshots/easystroke.png)](https://raw.githubusercontent.com/Grafikart/dotfiles/master/screenshots/easystroke.png)
 
 ## Remapper touches du clavier
 
