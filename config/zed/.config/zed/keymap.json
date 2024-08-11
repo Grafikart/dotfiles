@@ -1,0 +1,17 @@
+[
+  {
+    "bindings": {
+      "cmd-o": "file_finder::Toggle",
+      "cmd-p": "command_palette::Toggle",
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-b": "editor::GoToDefinition",
+      "cmd-d": "editor::SelectLargerSyntaxNode",
+      "cmd-shift-d": "editor::SelectAllMatches",
+      "alt-&": "workspace::ToggleLeftDock",
+      "alt-é": "workspace::ToggleRightDock",
+      "cmd-r": "search::ToggleReplace",
+      "alt-enter": "editor::ToggleCodeActions",
+      "cmd-shift-o": "editor::RevealInFileManager"
+    }
+  }
+]
