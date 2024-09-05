@@ -32,7 +32,7 @@ i3:
 	mv ~/gitignore ~/.gitignore
 
 dd:
-	$(stow) zed
+	$(stow) code
 
 xfce:
 	$(stow) xfce4
