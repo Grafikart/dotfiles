@@ -142,14 +142,6 @@ bindsym XF86AudioPrev exec playerctl --all-players previous
 bindsym Print exec flameshot gui
 
 ###############################
-#          SOURIS             #
-###############################
-# Vitesse de la souris (Razer Taipan)
-# exec_always --no-startup-id ~/.config/i3/mousespeed.sh
-# Vitesse du scroll (trop lent sur la logitech G203 par défaut)
-exec_always --no-startup-id imwheel
-
-###############################
 #        WORKSPACES           #
 ###############################
 # Workspaces
@@ -230,19 +222,7 @@ for_window [class="Spotify"]           move to workspace $ws8
 #            MISC             #
 ###############################
 # Applications au démarrage
-exec --no-startup-id nvidia-settings --load-config-only
-exec --no-startup-id picom
-exec --no-startup-id discord
-exec --no-startup-id easystroke
-exec --no-startup-id redshift -l 43.610769:3.876716 -t 6500:3500 -l manual
-exec --no-startup-id nm-applet --sm-disable
-exec --no-startup-id xmodmap ~/.Xmodmap
-# exec --no-startup-id flatpak run com.spotify.Client
-# Pamac Manager a besoin de ça pour gérer l'authentification
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-# Désactive capslock
-exec --no-startup-id setxkbmap -option caps:none
+exec --no-startup-id ~/.config/i3/startup.sh
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 2
