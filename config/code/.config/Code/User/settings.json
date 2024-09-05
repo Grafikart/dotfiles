@@ -1,0 +1,106 @@
+{
+  "workbench.startupEditor": "none", // On ne veut pas une page d'accueil chargée
+  "editor.minimap.enabled": false,
+  // -- Sidebar
+  "workbench.tree.indent": 15, // Indente plus pour plus de clarté dans la sidebar
+  "workbench.tree.renderIndentGuides": "always",
+  // -- Topbar
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "window.titleBarStyle": "custom",
+  // -- Code
+  "editor.occurrencesHighlight": "off",
+  "editor.renderWhitespace": "trailing", // On ne veut pas laisser d'espace en fin de ligne
+  // Thème
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Operator Mono Lig', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 28,
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "[Tokyo Night]": {
+      "editor.selectionBackground": "#3D59A1",
+      "editor.selectionHighlightBackground": "#3D59A1"
+    }
+  },
+  // Ergonomie
+  "editor.hover.delay": 700, // Ajoute du délai pour éviter que les popups s'affiche tout le temps
+  "editor.hover.hidingDelay": 100,
+  "editor.stickyScroll.enabled": true,
+  "editor.parameterHints.enabled": false,
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+  "editor.suggest.insertMode": "replace", // L'autocomplétion remplace le mot en cours
+  "editor.acceptSuggestionOnCommitCharacter": false, // Evite que l'autocomplétion soit accepté lors d'un . par exemple
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.linkedEditing": true, // Quand on change un élément HTML, change la balise fermante
+  "explorer.autoReveal": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.editor.enablePreview": false, // Un clic sur un fichier l'ouvre
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.accessibilitySupport": "off",
+  "extensions.ignoreRecommendations": true,
+  "update.showReleaseNotes": false,
+  // Versioning
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  // Fichiers
+  "files.autoSave": "onFocusChange",
+  "files.defaultLanguage": "markdown",
+  "files.exclude": {
+    "**/.idea": true
+  },
+  // Languages
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.tsserver.experimental.useVsCodeWatcher": false,
+  // Formatters
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  /**
+   * Extensions
+   **/
+  "go.toolsManagement.autoUpdate": true,
+  "window.zoomLevel": 2,
+  "emmet.includeLanguages": {
+    "templ": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.activityBar.location": "hidden"
+}
