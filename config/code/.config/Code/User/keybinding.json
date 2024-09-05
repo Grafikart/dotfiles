@@ -1,0 +1,93 @@
+[
+  // Etend la sélection
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  // Trouve toutes les occurences du mot sélectionné
+  {
+    "key": "shift+ctrl+d",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  // Ouvre un fichier
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.quickOpen"
+  },
+  // Crée un nouveau fichier
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
+  },
+  // Commandes
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.showCommands"
+  },
+  // Masque / Affiche l'explorateur de fichier
+  {
+    "key": "alt+1",
+    "command": "workbench.view.explorer",
+    "when": "sideBarVisible && activeViewlet !== 'workbench.view.explorer'"
+  },
+  {
+    "key": "alt+1",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    "when": "!sideBarVisible || activeViewlet === 'workbench.view.explorer'"
+  },
+  // Masque / Affiche la vue git
+  {
+    "key": "ctrl+k",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "view.workbench.scm.visible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  // Masque / Affiche le terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // Nettoie le terminal
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  // Ouvre le fichier courant dans l'explorer de l'OS
+  {
+    "key": "shift+ctrl+o",
+    "command": "revealFileInOS"
+  },
+  // Navigation par symbole
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.gotoSymbol"
+  },
+  // Reformatte le document
+  {
+    "key": "alt+ctrl+l",
+    "command": "editor.action.formatDocument"
+  },
+  // Quick fix
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorTextFocus"
+  }
+]

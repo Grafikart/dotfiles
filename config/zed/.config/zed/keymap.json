@@ -6,12 +6,20 @@
       "cmd-t": "workspace::ToggleBottomDock",
       "cmd-b": "editor::GoToDefinition",
       "cmd-d": "editor::SelectLargerSyntaxNode",
+      "cmd-r": "search::ToggleReplace",
       "cmd-shift-d": "editor::SelectAllMatches",
+      "cmd-shift-o": "editor::RevealInFileManager",
+      "ctrl-o": "file_finder::Toggle",
+      "ctrl-p": "command_palette::Toggle",
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-b": "editor::GoToDefinition",
+      "ctrl-d": "editor::SelectLargerSyntaxNode",
+      "ctrl-r": "search::ToggleReplace",
+      "ctrl-shift-d": "editor::SelectAllMatches",
+      "ctrl-shift-o": "editor::RevealInFileManager",
       "alt-&": "workspace::ToggleLeftDock",
       "alt-é": "workspace::ToggleRightDock",
-      "cmd-r": "search::ToggleReplace",
-      "alt-enter": "editor::ToggleCodeActions",
-      "cmd-shift-o": "editor::RevealInFileManager"
+      "alt-enter": "editor::ToggleCodeActions"
     }
   }
 ]
