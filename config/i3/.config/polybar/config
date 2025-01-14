@@ -38,7 +38,7 @@ modules-right = cpu memory volume date powermenu
 
 [bar/center]
 inherit = bar/default
-monitor = DP-1
+monitor = DP-0
 modules-right = redshift powermenu
 tray-position = right
 tray-detached = false
@@ -46,13 +46,13 @@ tray-padding = 0
 
 [bar/left]
 inherit = bar/default
-monitor = DP-3
+monitor = HDMI-0
 modules-left = date
 modules-right = cpu memory i3
 
 [bar/right]
 inherit = bar/default
-monitor = HDMI-0
+monitor = DP-3
 modules-left = i3 music
 modules-center = date
 modules-right = volume

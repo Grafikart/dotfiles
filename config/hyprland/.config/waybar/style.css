@@ -11,19 +11,72 @@
 window#waybar {
     background: #1A1B26;
     color: #C0CAF5;
+    background: transparent;
 }
 
-big {
-    color: #7AA2F7;
+#backlight,
+#battery,
+#bluetooth,
+#custom-cliphist,
+#clock,
+#custom-cpuinfo,
+#cpu,
+#custom-gpuinfo,
+#idle_inhibitor,
+#custom-keybindhint,
+#language,
+#memory,
+#mpris,
+#network,
+#custom-notifications,
+#custom-power,
+#pulseaudio,
+#custom-spotify,
+#taskbar,
+#custom-theme,
+#tray,
+#window,
+#workspaces {
+    background: #1A1B26;
+    color: #C0CAF5;
+    border-radius: 8px;
+    opacity: 1;
+    margin: 0px 2px 0px 2px;
+    padding: 4px 8px 4px 8px;
+}
+
+#custom-shutdown,
+#custom-media {
+    margin: 0px 2px 0px 2px;
+    padding: 4px 8px 4px 8px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left,
+.modules-right {
+    margin: 4px 2px 0 2px;
+}
+
+.modules-center {
+    margin-top: 4px;
+}
+
+#workspaces {
+    padding: 4px;
+}
+
+#workspaces label {
+    font-size: 16px;
+    padding: 0px 0px 0px 4px;
 }
 
 #workspaces button,
 #workspaces button:hover {
-    padding-left: 5px;
-    padding-right: 5px;
+    margin: 0px 2px;
     background-color: #1A1B26;
     color: #444B6A;
-    border-radius: 0;
+    border-radius: 4px;
+    min-width: 0;
 }
 
 #workspaces button.visible {
@@ -41,14 +94,10 @@ big {
 
 #cpu {
     color: #9D7CD8;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 #memory {
     color: #449DAB;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 #custom-media {
@@ -60,7 +109,6 @@ big {
 }
 
 #custom-shutdown {
-    margin-right: 10px;
     color: #A6333F;
 }
 

@@ -29,9 +29,6 @@ client.urgent           $active     $active    	$background    #DB4B4B   $active
 client.placeholder      $background $background $foreground    #000000   $inactive
 client.background       $background
 
-# Fond d'écran
-exec_always --no-startup-id ~/.config/i3/bing-wallpaper.sh
-
 ###############################
 #         KEYBINDING          #
 ###############################
@@ -40,6 +37,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec kitty -d "`xcwd`"
+# bindsym $mod+Return exec ghostty --working-directory="`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -153,9 +151,9 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $monitorCenter DP-1
-set $monitorLeft   DP-3
-set $monitorRight  HDMI-0
+set $monitorCenter DP-0
+set $monitorLeft   HDMI-0
+set $monitorRight  DP-3
 
 # Ecran associé à chaque Workspace
 workspace $ws1 output $monitorCenter
@@ -221,8 +219,6 @@ for_window [class="Spotify"]           move to workspace $ws8
 ###############################
 #            MISC             #
 ###############################
-# Applications au démarrage
-exec --no-startup-id ~/.config/i3/startup.sh
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 2
@@ -233,3 +229,6 @@ smart_gaps on
 
 # Redémarre polybar quand on redémarre i3
 exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
+
+# Applications au démarrage
+exec --no-startup-id ~/.config/i3/startup.sh

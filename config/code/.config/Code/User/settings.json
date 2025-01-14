@@ -16,7 +16,6 @@
   "editor.fontLigatures": false,
   "editor.fontSize": 16,
   "editor.lineHeight": 28,
-  "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
@@ -33,8 +32,8 @@
   "editor.wordWrap": "on",
   "editor.suggest.insertMode": "replace", // L'autocomplétion remplace le mot en cours
   "editor.acceptSuggestionOnCommitCharacter": false, // Evite que l'autocomplétion soit accepté lors d'un . par exemple
-  "editor.formatOnSave": false,
-  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
   "editor.linkedEditing": true, // Quand on change un élément HTML, change la balise fermante
   "explorer.autoReveal": false,
   "explorer.confirmDragAndDrop": false,
@@ -97,10 +96,45 @@
    * Extensions
    **/
   "go.toolsManagement.autoUpdate": true,
-  "window.zoomLevel": 2,
   "emmet.includeLanguages": {
-    "templ": "html"
+    "templ": "html",
+    "blade.php": "html",
+    "twig": "html"
   },
   "emmet.triggerExpansionOnTab": true,
-  "workbench.activityBar.location": "hidden"
+  "workbench.colorTheme": "Tokyo Night",
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.templ": "${capture}_templ.go,${capture}_templ.txt",
+    "composer.json": "composer.lock",
+    "psalm.xml": "psalm-baseline.xml",
+    ".php-cs-fixer.php": ".php-cs-fixer.cache",
+    "phpunit.xml": ".phpunit.result.cache",
+    "*.php": "${basename}Test.php"
+  },
+  "files.associations": {
+    ".php_cs.dist": "php",
+    ".php_cs": "php",
+    ".pre": "php",
+    "artisan": "php"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "_ide_helper.php": true,
+    "_ide_helper_models.php": true,
+    ".php_cs.cache": true,
+    ".phpstorm.meta.php": true,
+    ".phpunit.result.cache": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "svelte.enable-ts-plugin": true
 }

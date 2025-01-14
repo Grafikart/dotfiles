@@ -22,11 +22,11 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 
 ### Wayland vs x11
 
-Wayland ne semble pas prêt, car je rencontre les problèmes suivants : 
+Wayland ne semble pas prêt, car je rencontre les problèmes suivants (en essayant hyprland) : 
 
-- Glisser / déposer un fichier ne fonctionne pas sur certaines fenêtres (éditeurs / navigateurs)
-- Copier / Coller du texte ne fonctionne pas sur certaines animations
-- Certaines fenêtres clignotent (jetbrains-toolbox)
+- Flameshot (capture d'écran ne supporte pas Wayland) : https://github.com/flameshot-org/flameshot/issues/2978
+- Le partage d'écran ne fonctionne pas bien sur brave (plantage intempestif lors de l'utilisation de `xdg-desktop-portal-hyprland` et double fenêtre de demande)
+- OBS demande l'écran à capturer à chaque démarrage
 
 ### LightDM démarre avant nvidia
 
@@ -76,7 +76,7 @@ Et on reboot !
 ### Tearing
 
 - Utiliser nvidia settings pour gérer les settings
-- Exporter la configuration et ajouter  `{ ForceCompositionPipeline = On }` dans la partie metamodes de "Screen"
+- Exporter la configuration et ajouter `{ ForceCompositionPipeline = On }` dans la partie metamodes de "Screen"
 
 ## Remapper touches du clavier
 

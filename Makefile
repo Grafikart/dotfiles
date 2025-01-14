@@ -11,16 +11,12 @@ installi3: install
 installdev: install
 	xargs -d '\n' -a packages/dev.list yay --noconfirm --needed -S
 
-i3:
+dotfiles:
 	$(stow) urxvt
 	xrdb ~/.Xresources
 	$(stow) fish
-	$(stow) i3
-	$(stow) polybar
-	$(stow) picom
 	$(stow) keyboard
 	$(stow) easystroke
-	$(stow) dunst
 	$(stow) rofi
 	$(stow) vim
 	$(stow) gitnow
@@ -34,5 +30,8 @@ i3:
 dd:
 	$(stow) code
 
-xfce:
-	$(stow) xfce4
+hyprland:
+	$(stow) hyprland
+
+i3:
+	$(stow) i3

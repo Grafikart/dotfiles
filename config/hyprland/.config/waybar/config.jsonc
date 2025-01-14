@@ -3,8 +3,6 @@
   // Center
   {
     "output": "DP-1",
-    "height": 30,
-    "spacing": 10,
     "modules-left": [
       "hyprland/workspaces"
     ],
@@ -12,6 +10,7 @@
     ],
     "modules-right": [
       "mpd",
+      "custom/shutdown",
       "tray"
     ],
     "mpd": {
@@ -45,32 +44,32 @@
       "spacing": 10
     },
     "hyprland/workspaces": {
-      "format": "{name} {icon} ",
+      "format": "{icon} ",
       "format-icons": {
         "1": "\uF121",
         "2": "\uF120",
-        "3": "\uF269",
-        "4": "\uF299",
-        "5": "\uF1D3",
-        "6": "\uF269",
-        "7": "\uF269",
+        "3": "\ueb01",
+        "4": "\uea83",
+        "5": "\udb83\udede",
+        "6": "\ueb01",
+        "7": "\ueb01",
         "8": "\uF1BC"
       }
+    },
+    "custom/shutdown": {
+      "format": "",
+      "interval": "once",
+      "on-click": "wlogout -b 2"
     }
   },
   // Left
   {
-    "height": 30,
-    "spacing": 10,
-    "output": "DP-2",
+    "output": "HDMI-A-1",
     "modules-left": [
       "clock"
     ],
     "modules-center": [],
     "modules-right": [
-      "cpu",
-      "memory",
-      "custom/gpu",
       "hyprland/workspaces"
     ],
     "clock": {
@@ -90,24 +89,22 @@
       "format": "{}% "
     },
     "hyprland/workspaces": {
-      "format": "{name} {icon} ",
+      "format": "{icon} ",
       "format-icons": {
         "1": "\uF121",
         "2": "\uF120",
-        "3": "\uF269",
-        "4": "\uF299",
-        "5": "\uF1D3",
-        "6": "\uF269",
-        "7": "\uF269",
+        "3": "\ueb01",
+        "4": "\uea83",
+        "5": "\udb83\udede",
+        "6": "\ueb01",
+        "7": "\ueb01",
         "8": "\uF1BC"
       }
     }
   },
   // Right
   {
-    "height": 30,
-    "spacing": 10,
-    "output": "HDMI-A-1",
+    "output": "DP-2",
     "modules-left": [
       "hyprland/workspaces",
       "custom/media"
@@ -116,8 +113,7 @@
       "clock"
     ],
     "modules-right": [
-      "pulseaudio",
-      "custom/shutdown"
+      "pulseaudio"
     ],
     "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
@@ -147,20 +143,20 @@
       "format": "{:%d %B, %H:%M}"
     },
     "hyprland/workspaces": {
-      "format": "{name} {icon} ",
+      "format": "{icon} ",
       "format-icons": {
         "1": "\uF121",
         "2": "\uF120",
-        "3": "\uF269",
-        "4": "\uF299",
-        "5": "\uF1D3",
-        "6": "\uF269",
-        "7": "\uF269",
+        "3": "\ueb01",
+        "4": "\uea83",
+        "5": "\udb83\udede",
+        "6": "\ueb01",
+        "7": "\ueb01",
         "8": "\uF1BC"
       }
     },
     "custom/media": {
-      "format": "{icon} {}",
+      "format": "{0} {1}",
       "justify": "center",
       "max-length": 40,
       "format-icons": {
@@ -171,12 +167,6 @@
       "exec": "$HOME/.config/waybar/music.sh --title",
       "interval": 10,
       "on-click": "hyprctl dispatch workspace 8"
-    },
-    "custom/shutdown": {
-      "format": "",
-      "margin-right": 10,
-      "interval": "once",
-      "on-click": "shutdown now"
     }
   }
 ]
