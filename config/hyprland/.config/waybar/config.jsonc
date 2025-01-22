@@ -74,7 +74,8 @@
     ],
     "clock": {
       "timezone": "Europe/Paris",
-      "format": "{:%d %B, %H:%M}"
+      "locale":"fr_FR.utf8",
+      "format": "{:L%d %B, %H:%M}"
     },
     "cpu": {
       "format": "{usage}% <big>\uDB80\uDF5B</big>",
@@ -110,9 +111,9 @@
       "custom/media"
     ],
     "modules-center": [
-      "clock"
     ],
     "modules-right": [
+      "clock",
       "pulseaudio"
     ],
     "pulseaudio": {
@@ -140,7 +141,8 @@
     },
     "clock": {
       "timezone": "Europe/Paris",
-      "format": "{:%d %B, %H:%M}"
+      "locale":"fr_FR.utf8",
+      "format": "{:L%d %B, %H:%M}"
     },
     "hyprland/workspaces": {
       "format": "{icon} ",

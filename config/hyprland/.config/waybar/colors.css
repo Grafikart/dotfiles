@@ -1,0 +1,12 @@
+/*
+TokyoNight
+@define-color bg #1A1B26;
+@define-color bgActive #2f3344;
+@define-color text #444B6A;
+@define-color textActive #C0CAF5;
+*/
+
+@define-color bg alpha(#c69a8f, 0.2);
+@define-color bgActive alpha(#c69a8f, 0.4);
+@define-color text alpha(#ebaaa4, 0.4);
+@define-color textActive #fdd3cf;

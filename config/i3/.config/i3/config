@@ -22,12 +22,12 @@ set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
 # class			border	    backgr.   	text	       indicat   child_border
-client.focused          $background $background $active        #F8CD7A   $active
-client.focused_inactive $background $background inactive       #5A638C   $inactive
-client.unfocused        $background #16161E     $inactive      #34384D   $inactive
-client.urgent           $active     $active    	$background    #DB4B4B   $active
-client.placeholder      $background $background $foreground    #000000   $inactive
-client.background       $background
+# client.focused          $background $background $active        #F8CD7A   $active
+# client.focused_inactive $background $background inactive       #5A638C   $inactive
+# client.unfocused        $background #16161E     $inactive      #34384D   $inactive
+# client.urgent           $active     $active    	$background    #DB4B4B   $active
+# client.placeholder      $background $background $foreground    #000000   $inactive
+# client.background       $background
 
 ###############################
 #         KEYBINDING          #

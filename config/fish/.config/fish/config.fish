@@ -2,6 +2,11 @@
 alias cr "composer require "
 alias sy "php bin/console "
 alias remove "pacaur -Rns"
+alias ls 'eza --icons=auto' # ls replacement
+alias ll 'eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias upgrade 'yay -Syu --noconfirm && flatpak update' # Upgrade the system
+alias fserve 'caddy file-server --listen :8000 --browse' # Serve the current directory
+alias webcam 'mpv av://v4l2:/dev/video0 --profile=low-latency --untimed' # Show the webcam
 
 # Docker
 alias dk "docker kill (docker ps -q)"
