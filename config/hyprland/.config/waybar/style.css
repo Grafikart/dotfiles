@@ -111,6 +111,11 @@ window#waybar {
     color: #A6333F;
 }
 
+#clock {
+    background: transparent;
+    color: #ffe8e7;
+}
+
 
 .colors {
     color: #6878A6;

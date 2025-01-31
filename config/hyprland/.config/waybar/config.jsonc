@@ -65,16 +65,17 @@
   // Left
   {
     "output": "HDMI-A-1",
-    "modules-left": [
+    "modules-left": [],
+    "modules-center": [
       "clock"
     ],
-    "modules-center": [],
     "modules-right": [
+      "custom/gpu",
       "hyprland/workspaces"
     ],
     "clock": {
       "timezone": "Europe/Paris",
-      "locale":"fr_FR.utf8",
+      "locale": "fr_FR.utf8",
       "format": "{:L%d %B, %H:%M}"
     },
     "cpu": {
@@ -111,9 +112,9 @@
       "custom/media"
     ],
     "modules-center": [
+      "clock"
     ],
     "modules-right": [
-      "clock",
       "pulseaudio"
     ],
     "pulseaudio": {
@@ -141,7 +142,7 @@
     },
     "clock": {
       "timezone": "Europe/Paris",
-      "locale":"fr_FR.utf8",
+      "locale": "fr_FR.utf8",
       "format": "{:L%d %B, %H:%M}"
     },
     "hyprland/workspaces": {
