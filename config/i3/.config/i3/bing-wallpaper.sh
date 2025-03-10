@@ -1,5 +1,5 @@
 #!/bin/sh
-imagepath="$HOME/Images/bing-wallpaper.jpg"
+imagepath="$HOME/Images/bing-wallpaperx2.jpg"
 urlpath=$( \
 sleep 2
 curl "https://www.bing.com/HPImageArchive.aspx?format=rss&idx=0&n=1&mkt=en-US" \

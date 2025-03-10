@@ -3,16 +3,9 @@
   // Center
   {
     "output": "DP-1",
-    "modules-left": [
-      "hyprland/workspaces"
-    ],
-    "modules-center": [
-    ],
-    "modules-right": [
-      "mpd",
-      "custom/shutdown",
-      "tray"
-    ],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["mpd", "custom/shutdown", "tray"],
     "mpd": {
       "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
       "format-disconnected": "Disconnected ",
@@ -20,28 +13,28 @@
       "unknown-tag": "N/A",
       "interval": 5,
       "consume-icons": {
-        "on": " "
+        "on": " ",
       },
       "random-icons": {
         "off": "<span color=\"#f53c3c\"></span> ",
-        "on": " "
+        "on": " ",
       },
       "repeat-icons": {
-        "on": " "
+        "on": " ",
       },
       "single-icons": {
-        "on": "1 "
+        "on": "1 ",
       },
       "state-icons": {
         "paused": "",
-        "playing": ""
+        "playing": "",
       },
       "tooltip-format": "MPD (connected)",
-      "tooltip-format-disconnected": "MPD (disconnected)"
+      "tooltip-format-disconnected": "MPD (disconnected)",
     },
     "tray": {
       // "icon-size": 21,
-      "spacing": 10
+      "spacing": 10,
     },
     "hyprland/workspaces": {
       "format": "{icon} ",
@@ -53,42 +46,37 @@
         "5": "\udb83\udede",
         "6": "\ueb01",
         "7": "\ueb01",
-        "8": "\uF1BC"
-      }
+        "8": "\uF1BC",
+      },
     },
     "custom/shutdown": {
       "format": "",
       "interval": "once",
-      "on-click": "wlogout -b 2"
-    }
+      "on-click": "wlogout -b 2",
+    },
   },
   // Left
   {
     "output": "HDMI-A-1",
     "modules-left": [],
-    "modules-center": [
-      "clock"
-    ],
-    "modules-right": [
-      "custom/gpu",
-      "hyprland/workspaces"
-    ],
+    "modules-center": ["clock"],
+    "modules-right": ["hyprland/workspaces"],
     "clock": {
       "timezone": "Europe/Paris",
       "locale": "fr_FR.utf8",
-      "format": "{:L%d %B, %H:%M}"
+      "format": "{:L%d %B, %H:%M}",
     },
     "cpu": {
       "format": "{usage}% <big>\uDB80\uDF5B</big>",
-      "tooltip": false
+      "tooltip": false,
     },
     "custom/gpu": {
       "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
       "interval": 5,
-      "format": "{}% <big>\uE60D</big>"
+      "format": "{}% <big>\uE60D</big>",
     },
     "memory": {
-      "format": "{}% "
+      "format": "{}% ",
     },
     "hyprland/workspaces": {
       "format": "{icon} ",
@@ -100,23 +88,16 @@
         "5": "\udb83\udede",
         "6": "\ueb01",
         "7": "\ueb01",
-        "8": "\uF1BC"
-      }
-    }
+        "8": "\uF1BC",
+      },
+    },
   },
   // Right
   {
     "output": "DP-2",
-    "modules-left": [
-      "hyprland/workspaces",
-      "custom/media"
-    ],
-    "modules-center": [
-      "clock"
-    ],
-    "modules-right": [
-      "pulseaudio"
-    ],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio"],
     "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
       "format": "{volume}% {icon} {format_source}",
@@ -132,18 +113,14 @@
         "phone": "",
         "portable": "",
         "car": "",
-        "default": [
-          "",
-          "",
-          ""
-        ]
+        "default": ["", "", ""],
       },
-      "on-click": "pavucontrol"
+      "on-click": "pavucontrol",
     },
     "clock": {
       "timezone": "Europe/Paris",
       "locale": "fr_FR.utf8",
-      "format": "{:L%d %B, %H:%M}"
+      "format": "{:L%d %B, %H:%M}",
     },
     "hyprland/workspaces": {
       "format": "{icon} ",
@@ -155,8 +132,8 @@
         "5": "\udb83\udede",
         "6": "\ueb01",
         "7": "\ueb01",
-        "8": "\uF1BC"
-      }
+        "8": "\uF1BC",
+      },
     },
     "custom/media": {
       "format": "{0} {1}",
@@ -164,12 +141,12 @@
       "max-length": 40,
       "format-icons": {
         "spotify": "\uF001",
-        "default": "\uF001"
+        "default": "\uF001",
       },
       "escape": true,
       "exec": "$HOME/.config/waybar/music.sh --title",
       "interval": 10,
-      "on-click": "hyprctl dispatch workspace 8"
-    }
-  }
+      "on-click": "hyprctl dispatch workspace 8",
+    },
+  },
 ]

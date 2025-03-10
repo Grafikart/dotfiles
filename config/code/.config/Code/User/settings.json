@@ -13,10 +13,9 @@
   "editor.renderWhitespace": "trailing", // On ne veut pas laisser d'espace en fin de ligne
   // Thème
   "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Operator Mono Lig', monospace",
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.lineHeight": 28,
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
       "editor.selectionBackground": "#3D59A1",
@@ -43,8 +42,6 @@
   "extensions.ignoreRecommendations": true,
   "update.showReleaseNotes": false,
   // Versioning
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
   // Fichiers
   "files.autoSave": "onFocusChange",
@@ -73,7 +70,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[php]": {
-    "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
@@ -92,10 +89,23 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
+  "[markdown]": {
+     "editor.fontLigatures": true,
+     "editor.fontSize": 16,
+     "editor.lineHeight": 26,
+     "editor.wordWrap": "wordWrapColumn",
+     "editor.wordWrapColumn": 72,
+     "editor.lineNumbers": "off",
+     "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    },
   /**
    * Extensions
    **/
-  "go.toolsManagement.autoUpdate": true,
+  "microsoft-authentication.implementation": "classic",
   "emmet.includeLanguages": {
     "templ": "html",
     "blade.php": "html",
@@ -115,7 +125,13 @@
     "psalm.xml": "psalm-baseline.xml",
     ".php-cs-fixer.php": ".php-cs-fixer.cache",
     "phpunit.xml": ".phpunit.result.cache",
-    "*.php": "${basename}Test.php"
+    "*.php": "${basename}Test.php",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
   },
   "files.associations": {
     ".php_cs.dist": "php",

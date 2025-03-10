@@ -1,6 +1,7 @@
 # Alias
 alias cr "composer require "
 alias sy "php bin/console "
+alias mdata "sudo mkdir -p /run/media/jonathan/Data && sudo ntfs-3g /dev/sda2 /run/media/jonathan/Data"
 alias remove "pacaur -Rns"
 alias ls 'eza --icons=auto' # ls replacement
 alias ll 'eza -lha --icons=auto --sort=name --group-directories-first' # long list all
@@ -36,4 +37,3 @@ set -px --path PATH "/home/jonathan/.bun/bin"
 
 # Android
 set -gx ANDROID_HOME "$HOME/Android/Sdk"
-

@@ -22,11 +22,10 @@ cat package.list | xargs yaourt -S --needed --noconfirm
 
 ### Wayland vs x11
 
-Wayland ne semble pas prêt, car je rencontre les problèmes suivants (en essayant hyprland) : 
+Wayland ne semble pas prêt, car je rencontre les problèmes suivants (en essayant hyprland) :
 
 - Flameshot (capture d'écran ne supporte pas Wayland) : https://github.com/flameshot-org/flameshot/issues/2978
 - Le partage d'écran ne fonctionne pas bien sur brave (plantage intempestif lors de l'utilisation de `xdg-desktop-portal-hyprland` et double fenêtre de demande)
-- OBS demande l'écran à capturer à chaque démarrage
 - Les applications électrons tournent sur xwayland, [pareil pour brave](https://github.com/brave/brave-browser/issues/39802)
 - Les éditeurs [Jetbrains ne supportent pas le drag'n drop s'ils tournent sur Wayland](https://blog.jetbrains.com/platform/2024/07/wayland-support-preview-in-2024-2/#drag-and-drop)
 
@@ -82,15 +81,17 @@ Et on reboot !
 
 ## Remapper touches du clavier
 
-Pour remplacer une touche par une autre. Je l'utilise pour remplacer la touche puissance 2 par un back-tick.
+Pour remplacer une touche par une autre, utiliser [keyd](https://github.com/rvaiya/keyd) avec cette config dans `/etc/keyd/default.conf`
 
 ```
-# On génère le fichier de map
-xmodmap -pke > ~/.Xmodmap
-# On trouve la clef a remap
-xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-# On modifie le fichier Xmodmap et on teste avec
-xmodmap ~/.Xmodmap
+[ids]
+
+*
+
+[main]
+
+capslock = overload(control, esc)
+` = G-7
 ```
 
 ## Trouver le process qui utilise un port
