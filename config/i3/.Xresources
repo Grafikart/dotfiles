@@ -25,6 +25,12 @@ Xft.hinting:       	true
 Xft.hintstyle:		  hintslight
 ! Xft.lcdfilter:	  lcddefault
 
+! =================
+!       Scaling
+! =================
+*dpi: 150
+Xft.dpi: 150
+
 ! ============
 !   Couleurs
 ! ============
