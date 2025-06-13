@@ -1,4 +1,5 @@
 # Alias
+alias zed "zeditor"
 alias cr "composer require "
 alias sy "php bin/console "
 alias mdata "sudo mkdir -p /run/media/jonathan/Data && sudo ntfs-3g /dev/sda2 /run/media/jonathan/Data"
