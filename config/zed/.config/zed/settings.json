@@ -2,9 +2,12 @@
   "git_panel": {
     "dock": "right"
   },
-  "disable_ai": false,
+  "disable_ai": true,
   "show_edit_predictions": false,
-  "vim_mode": false,
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "never"
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -18,7 +21,7 @@
     "diagnostics": false,
     "metrics": false
   },
-  "format_on_save": "off",
+  "format_on_save": "on",
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "buffer_font_family": "Zed Mono",

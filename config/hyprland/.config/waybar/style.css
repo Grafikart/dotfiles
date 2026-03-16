@@ -40,7 +40,10 @@ window#waybar {
 #window,
 #workspaces {
     background: @bg;
-    color: @textActive;
+    border: solid 1px @border;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    color: @border;
     border-radius: 8px;
     opacity: 1;
     margin: 0px 2px 0px 2px;
@@ -88,50 +91,50 @@ window#waybar {
 
 #workspaces button.special,
 #workspaces button.urgent {
-    color: #DB4B4B;
+    color: #db4b4b;
 }
 
 #cpu {
-    color: #9D7CD8;
+    color: #9d7cd8;
 }
 
 #memory {
-    color: #449DAB;
+    color: #449dab;
 }
 
 #custom-media {
-    color: #9ECE6A;
+    color: @border;
 }
 
 #custom-gpu {
-    color: #7AA2F7;
+    color: #7aa2f7;
 }
 
 #custom-shutdown {
-    color: #A6333F;
+    color: #a6333f;
 }
 
 #clock {
     background: transparent;
-    color: #ffe8e7;
+    border: none;
+    color: @border;
 }
 
-
 .colors {
-    color: #6878A6;
+    color: #6878a6;
     color: #5d6791;
-    color: #DB4B4B;
-    color: #A6333F;
-    color: #9ECE6A;
-    color: #9ECE6A;
-    color: #E0AF68;
-    color: #BBA461;
-    color: #7AA2F7;
-    color: #6D91DE;
-    color: #BB9AF7;
-    color: #9D7CD8;
-    color: #41A6B5;
-    color: #449DAB;
+    color: #db4b4b;
+    color: #a6333f;
+    color: #9ece6a;
+    color: #9ece6a;
+    color: #e0af68;
+    color: #bba461;
+    color: #7aa2f7;
+    color: #6d91de;
+    color: #bb9af7;
+    color: #9d7cd8;
+    color: #41a6b5;
+    color: #449dab;
     color: @text;
-    color: #9AA5CE;
+    color: #9aa5ce;
 }
