@@ -1,6 +1,34 @@
 {
+  "chat.disableAIFeatures": true,
   "workbench.startupEditor": "none", // On ne veut pas une page d'accueil chargée
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
+  // -- VIM
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["s"],
+      "commands": ["flash-vscode.start"],
+    },
+    {
+      "before": ["S"],
+      "commands": ["flash-vscode.startSelection"],
+    },
+    {
+      "before": ["t"],
+      "commands": ["flash-vscode.jump.treesitterSelection"],
+    },
+    {
+      "before": ["T"],
+      "commands": ["flash-vscode.remoteTreesitterSelection"],
+    },
+    {
+      "before": ["<BS>"],
+      "commands": ["flash-vscode.backspace"],
+    },
+    {
+      "before": ["<Esc>"],
+      "commands": ["flash-vscode.exit"],
+    },
+  ],
   // -- Sidebar
   "workbench.tree.indent": 15, // Indente plus pour plus de clarté dans la sidebar
   "workbench.tree.renderIndentGuides": "always",
@@ -16,11 +44,12 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.lineHeight": 28,
+  "window.zoomLevel": 2,
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
       "editor.selectionBackground": "#3D59A1",
-      "editor.selectionHighlightBackground": "#3D59A1"
-    }
+      "editor.selectionHighlightBackground": "#3D59A1",
+    },
   },
   // Ergonomie
   "editor.hover.delay": 700, // Ajoute du délai pour éviter que les popups s'affiche tout le temps
@@ -47,7 +76,7 @@
   "files.autoSave": "onFocusChange",
   "files.defaultLanguage": "markdown",
   "files.exclude": {
-    "**/.idea": true
+    "**/.idea": true,
   },
   // Languages
   "javascript.preferences.importModuleSpecifierEnding": "js",
@@ -55,53 +84,53 @@
   "typescript.tsserver.experimental.useVsCodeWatcher": false,
   // Formatters
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[php]": {
     "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
   },
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
   },
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
   },
   "[go]": {
     "editor.defaultFormatter": "golang.go",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
   },
   "[markdown]": {
-     "editor.fontLigatures": true,
-     "editor.fontSize": 16,
-     "editor.lineHeight": 26,
-     "editor.wordWrap": "wordWrapColumn",
-     "editor.wordWrapColumn": 72,
-     "editor.lineNumbers": "off",
-     "editor.quickSuggestions": {
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 26,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 72,
+    "editor.lineNumbers": "off",
+    "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
-      "other": "off"
+      "other": "off",
     },
-    },
+  },
   /**
    * Extensions
    **/
@@ -109,10 +138,9 @@
   "emmet.includeLanguages": {
     "templ": "html",
     "blade.php": "html",
-    "twig": "html"
+    "twig": "html",
   },
   "emmet.triggerExpansionOnTab": true,
-  "workbench.colorTheme": "Tokyo Night",
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -131,13 +159,13 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*"
+    "*.s3db": "${capture}.${extname}-*",
   },
   "files.associations": {
     ".php_cs.dist": "php",
     ".php_cs": "php",
     ".pre": "php",
-    "artisan": "php"
+    "artisan": "php",
   },
   "search.exclude": {
     "**/node_modules": true,
@@ -147,14 +175,19 @@
     "_ide_helper_models.php": true,
     ".php_cs.cache": true,
     ".phpstorm.meta.php": true,
-    ".phpunit.result.cache": true
+    ".phpunit.result.cache": true,
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "svelte.enable-ts-plugin": true,
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "workbench.activityBar.location": "hidden"
+  "claudeCode.preferredLocation": "panel",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "git.enableSmartCommit": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "liveServer.settings.donotVerifyTags": true,
+  "workbench.activityBar.location": "hidden",
 }

@@ -38,7 +38,8 @@ window#waybar {
 #custom-theme,
 #tray,
 #window,
-#workspaces {
+#workspaces,
+#custom-shutdown {
     background: @bg;
     border: solid 1px @border;
     border-bottom-width: 3px;
@@ -91,7 +92,7 @@ window#waybar {
 
 #workspaces button.special,
 #workspaces button.urgent {
-    color: #db4b4b;
+    color: #e6dd9c;
 }
 
 #cpu {
@@ -111,7 +112,7 @@ window#waybar {
 }
 
 #custom-shutdown {
-    color: #a6333f;
+    background-color: #966c5e;
 }
 
 #clock {

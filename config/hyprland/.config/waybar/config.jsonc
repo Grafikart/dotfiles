@@ -97,7 +97,7 @@
     "output": "DP-2",
     "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio"],
+    "modules-right": ["custom/shutdown", "pulseaudio"],
     "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
       "format": "{volume}% {icon} {format_source}",
@@ -148,5 +148,10 @@
       "interval": 10,
       "on-click": "hyprctl dispatch workspace 8",
     },
-  },
+    "custom/shutdown": {
+      "format": "",
+      "interval": "once",
+      "on-click": "wlogout -b 2",
+    }
+  }
 ]

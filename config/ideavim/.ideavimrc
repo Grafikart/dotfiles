@@ -16,7 +16,7 @@ set hlsearch
 set surround
 set highlightedyank
 set sneak
-set easymotion
+" set easymotion
 set ideajoin
 set commentary
 set matchpairs+=<:>
@@ -36,7 +36,7 @@ noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
 
 " Remove search highlights on escape
-noremap <Esc> :nohlsearch<CR>
+" noremap <Esc> :nohlsearch<CR>
 
 " Navigation inside a file
 map <Leader>gr :action GotoSymbol<CR>
@@ -44,10 +44,15 @@ map <Leader>gm :action FileStructurePopup<CR>
 nmap gpf [m<CR>
 nmap <leader>* viwy \| :%s/\<<c-r>+\>//g<left><left>
 map ge :action GotoNextError<CR>
+nnoremap <leader>sr :%s/<C-R><C-W>//g<Left><Left>
 
 " Navigation between window
 map <C-Right> <C-w>l
 map <C-Left> <C-w>h
+
+" Surround
+vmap <leader>ss :action SurroundWithEmmet<CR>
+nmap <leader>ss ^vg_:action SurroundWithEmmet<CR>
 
 " Flash vim
 nmap s <Action>(flash.search)
@@ -70,3 +75,5 @@ xmap ; <Action>(flash.repeat)
 " enhance vim , (Repeat the last f/F/t/T search backward)
 nmap , <Action>(flash.repeat_backward)
 xmap , <Action>(flash.repeat_backward)
+
+xnoremap r y:%s/<C-r>0//gc<Left><Left><Left>

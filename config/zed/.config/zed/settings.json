@@ -1,25 +1,44 @@
 {
-  "git_panel": {
-    "dock": "right"
+  "cli_default_open_behavior": "new_window",
+  "agent": {
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": [],
   },
+  "project_panel": {
+    "dock": "left",
+  },
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "session": {
+    "trust_all_worktrees": false,
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "autosave": "on_focus_change",
+  "icon_theme": "Catppuccin Mocha",
   "disable_ai": true,
   "show_edit_predictions": false,
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "never"
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
+    "use_system_clipboard": "never",
   },
   "theme": "Tokyo Night",
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "format_on_save": "on",
   "ui_font_size": 16,
@@ -27,10 +46,11 @@
   "buffer_font_family": "Zed Mono",
   "languages": {
     "PHP": {
-      "language_servers": ["!intelephense", "phpactor", "..."]
+      "language_servers": ["!intelephense", "phpactor", "..."],
     },
     "Go": {
-      "format_on_save": "language_server"
-    }
-  }
+      "formatter": "language_server",
+      "format_on_save": "on",
+    },
+  },
 }

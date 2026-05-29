@@ -1,7 +1,7 @@
 [core]
 	excludesFile = ~/.gitignore
 	autocrlf = input
-	editor = vim
+	editor = nvim
 [user]
 	name = Jonathan
 	email = contact@grafikart.fr
