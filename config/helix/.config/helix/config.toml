@@ -39,3 +39,7 @@ space.e = [
 [keys.insert]
 C-s = ["normal_mode", ":w", "insert_mode"]
 
+git-exclude	= true
+
+[keys.normal.space]
+W = [":toggle soft-wrap.enable", ":redraw"]

@@ -2,6 +2,7 @@
   {
     "context": "Editor && !menu",
     "bindings": {
+      "shift shift": "project_symbols::Toggle",
       "ctrl-c": "editor::Copy", // vim default: return to normal mode
       "ctrl-x": "editor::Cut", // vim default: decrement
       "ctrl-v": "editor::Paste", // vim default: visual block mode
@@ -11,8 +12,8 @@
       "ctrl-s": "workspace::Save", // vim default: show signature
       "ctrl-w": "pane::CloseActiveItem", // vim default: show signature
       "ctrl-a": "editor::SelectAll", // vim default: increment
-      "ctrl-b": "workspace::ToggleLeftDock" // vim default: down
-    }
+      "ctrl-b": "workspace::ToggleLeftDock", // vim default: down
+    },
   },
   {
     "bindings": {
@@ -36,7 +37,7 @@
       "alt-&": "workspace::ToggleLeftDock",
       "alt-é": "workspace::ToggleRightDock",
       "alt-enter": "editor::ToggleCodeActions",
-      "ctrl-k": "git_panel::OpenMenu"
-    }
-  }
+      "ctrl-k": "git_panel::OpenMenu",
+    },
+  },
 ]
