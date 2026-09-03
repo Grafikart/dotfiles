@@ -1,3 +1,4 @@
+config/bin/.bin
 config/fish/.config/fish
 !config/fish/.config/fish/config.fish
 *.backup

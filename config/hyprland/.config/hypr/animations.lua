@@ -1,0 +1,11 @@
+-- Port of animations.conf.
+-- https://wiki.hyprland.org/Configuring/Variables/#animations
+-- Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+-- hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "default" })
+-- hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "default", style = "popin 80%" })
+-- hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "default", style = "popin 80%" })
+-- hl.animation({ leaf = "border", enabled = true, speed = 3, bezier = "default" })
+-- hl.animation({ leaf = "borderangle", enabled = true, speed = 3, bezier = "default" })
+-- hl.animation({ leaf = "fade", enabled = true, speed = 3, bezier = "default" })
+-- hl.animation({ leaf = "workspaces", enabled = true, speed = 2, bezier = "default", style = "slidefade 10%" })
+hl.config({ animations = { enabled = false } })

@@ -38,6 +38,7 @@
     },
     "hyprland/workspaces": {
       "format": "{icon} ",
+      "move-to-monitor": true,
       "format-icons": {
         "1": "\uF121",
         "2": "\uF120",
@@ -80,7 +81,16 @@
     },
     "hyprland/workspaces": {
       "format": "{icon} ",
+      "move-to-monitor": true,
       "format-icons": {
+        "code": "\uF121",
+        "terminal": "\uF120",
+        "browser": "\ueb01",
+        "misc": "\uea83",
+        "chat": "\udb83\udede",
+        "misc2": "\ueb01",
+        "preview": "\ueb01",
+        "music": "\uF1BC",
         "1": "\uF121",
         "2": "\uF120",
         "3": "\ueb01",
@@ -124,7 +134,16 @@
     },
     "hyprland/workspaces": {
       "format": "{icon} ",
+      "move-to-monitor": true,
       "format-icons": {
+        "code": "\uF121",
+        "terminal": "\uF120",
+        "browser": "\ueb01",
+        "misc": "\uea83",
+        "chat": "\udb83\udede",
+        "misc2": "\ueb01",
+        "preview": "\ueb01",
+        "music": "\uF1BC",
         "1": "\uF121",
         "2": "\uF120",
         "3": "\ueb01",
@@ -152,6 +171,6 @@
       "format": "",
       "interval": "once",
       "on-click": "wlogout -b 2",
-    }
-  }
+    },
+  },
 ]
