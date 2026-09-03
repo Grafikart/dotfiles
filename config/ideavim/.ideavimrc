@@ -54,26 +54,4 @@ map <C-Left> <C-w>h
 vmap <leader>ss :action SurroundWithEmmet<CR>
 nmap <leader>ss ^vg_:action SurroundWithEmmet<CR>
 
-" Flash vim
-nmap s <Action>(flash.search)
-xmap s <Action>(flash.search)
-" enhance vim f (find for char in characters to the right of the current cursor)
-nmap f <Action>(flash.find)
-xmap f <Action>(flash.find)
-" enhance vim F (find for char in characters to the left of the current cursor)
-nmap F <Action>(flash.find_backward)
-xmap F <Action>(flash.find_backward)
-" enhance vim t (till for char in characters to the right of the current cursor)
-nmap t <Action>(flash.till)
-xmap t <Action>(flash.till)
-" enhance vim T (till for char in characters to the left of the current cursor)
-nmap T <Action>(flash.till_backward)
-xmap T <Action>(flash.till_backward)
-" enhance vim ; (Repeat the last f/F/t/T search)
-nmap ; <Action>(flash.repeat)
-xmap ; <Action>(flash.repeat)
-" enhance vim , (Repeat the last f/F/t/T search backward)
-nmap , <Action>(flash.repeat_backward)
-xmap , <Action>(flash.repeat_backward)
-
 xnoremap r y:%s/<C-r>0//gc<Left><Left><Left>

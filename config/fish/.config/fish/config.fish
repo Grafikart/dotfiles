@@ -4,7 +4,7 @@ alias sy "php bin/console "
 alias mdata "sudo mkdir -p /run/media/jonathan/Data && sudo ntfs-3g /dev/sda2 /run/media/jonathan/Data"
 alias remove "pacaur -Rns"
 alias ll 'eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias upgrade 'yay -Syu --noconfirm && flatpak update' # Upgrade the system
+alias upgrade 'yay -Syu --editmenu && flatpak update' # Upgrade the system
 alias fserve 'caddy file-server --listen :8000 --browse' # Serve the current directory
 alias webcam 'mpv av://v4l2:/dev/video0 --profile=low-latency --untimed' # Show the webcam
 

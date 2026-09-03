@@ -1,6 +1,11 @@
 {
   "diff_view_style": "split",
   "cli_default_open_behavior": "new_window",
+  "agent": {
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "edit_predictions": {
     "provider": "zed",
   },
@@ -16,11 +21,14 @@
   },
   "agent_servers": {
     "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.6-terra"
+      },
       "type": "registry",
     },
   },
   "icon_theme": "Catppuccin Mocha",
-  "disable_ai": true,
+  "disable_ai": false,
   "show_edit_predictions": false,
   "vim_mode": true,
   "vim": {
@@ -42,8 +50,8 @@
   "code_actions_on_format": {
     "source.organizeImports": true,
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
   "terminal": {
     "font_fallbacks": ["Monofur Nerd Font Mono"],
   },
