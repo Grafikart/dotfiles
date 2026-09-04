@@ -1,0 +1,12 @@
+xkb_keymap {
+  xkb_keycodes { include "evdev+aliases(azerty)" };
+  xkb_types {
+    include "complete"
+  };
+  xkb_compatibility { include "complete" };
+  xkb_symbols {
+    include "pc+fr+inet(evdev)+capslock(escape)"
+    key <TLDE> { [ grave, asciitilde ] };
+  };
+  xkb_geometry { include "pc(pc105)" };
+};
